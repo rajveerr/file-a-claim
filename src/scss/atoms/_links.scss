@@ -1,7 +1,10 @@
 a {
-  color: $medium-blue;
+  color: $blue;
   text-decoration: none;
-  &:hover {
+  &:hover,
+  &:focus
+   {
     text-decoration: underline;
+    color: $medium-blue;
   }
 }

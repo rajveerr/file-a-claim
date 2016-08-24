@@ -4,6 +4,7 @@ html(lang="en")
   title
     | Aflac : File a Claim
   link(href='/css/main.css', rel='stylesheet')
+  meta(name='viewport', content='width=device-width')
   body
     .header-container
       h1
@@ -64,13 +65,61 @@ html(lang="en")
       fieldset.plain-fieldset
         legend Buttons
         p
-          button Default
-          button.btn-danger Cancel
-          button(disabled='disabled') Disabled
-          button.btn-secondary Secondary
-          button.btn-secondary.light Secondary Light
+          button Primary
         p
-          a.btn-link(href='javascript:void(0)') Link Button
+          button.btn-arrow-right Primary with Arrow
+        p
+          button(disabled=true) Disabled
+        p
+          button.btn-secondary Secondary
+        p
+          button.btn-secondary.btn-arrow-left Secondary with Arrow
+        p
+          button.btn-secondary(disabled=true) Disabled
+      fieldset.plain-fieldset
+        legend Breadcrumb
+        p
+          ul.breadcrumb
+            li
+              a(href='#') 
+                span Select Patient &amp; Claim Type
+            li
+              a.pending(href='#') 
+                span Claim Detail
+            li
+              a.pending(href='#') 
+                span Review
+            li
+              a.pending(href='#') 
+                span Acknowledge
+        p
+          ul.breadcrumb
+            li
+              a(href='#') 
+                span Select Patient &amp; Claim Type
+            li
+              a(href='#') 
+                span Claim Detail
+            li
+              a.pending(href='#') 
+                span Review
+            li
+              a.pending(href='#') 
+                span Acknowledge
+        p
+          ul.breadcrumb
+            li
+              a(href='#') 
+                span Select Patient &amp; Claim Type
+            li
+              a(href='#') 
+                span Claim Detail
+            li
+              a(href='#') 
+                span Review
+            li
+              a(href='#') 
+                span Acknowledge
       fieldset.plain-fieldset
         legend Links
         |     This is a 

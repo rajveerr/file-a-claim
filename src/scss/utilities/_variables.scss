@@ -75,20 +75,22 @@ $base-z-index: 0;
 // Primary
 
 $dark-gray: #373737;
-$blue: #009fc2;
-$medium-blue: #28B1DA;
+$blue: #1474DB;
+$medium-blue: #00C2EF;
+$orange: #FA9806;
 $white: #fff;
 
 
 // Secondary
 $green: #8DC058;
 $red: #D34C4B;
-$light-gray: #505050;
-$lightest-gray: #f5f4f4;
-$medium-gray: $light-gray;
+$medium-gray: #CFD4D6;
+$light-gray: #A0AAAE;
+$lightest-gray: #E9EFF0;
+
 
 // Font Colors
-$base-font-color: lighten($medium-gray, 15%);
+$base-font-color: $dark-gray;
 $action-color: $blue;
 
 // Border

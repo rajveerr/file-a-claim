@@ -1,0 +1,86 @@
+.breadcrumb {
+  list-style: none;
+  overflow: hidden;
+  font-family: $semiBold-font-family;
+  font-size: 1.2rem;
+  li {
+    float: left;
+    a {
+      color: white;
+      text-decoration: none;
+      padding: $small-spacing 0 $small-spacing 29px;
+      background-color: $orange;
+      max-width: 5em;
+      min-height: 3.5em;
+      position: relative;
+      display: block;
+      float: left;
+      line-height: 1;
+      &:after {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        /* Go big on the size, and let overflow hide */
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid $orange;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 84%;
+        z-index: 2;
+      }
+      &:before {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        /* Go big on the size, and let overflow hide */
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid white;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        margin-left: 1px;
+        left: 84%;
+        z-index: 1;
+      }
+      &.pending {
+        background-color: $lightest-gray;
+        color: $light-gray;
+        &:after {
+          border-left: 30px solid $lightest-gray;
+        }
+      }
+    }
+    span {
+      position: relative;
+      z-index: 3;
+    }
+    &:first-child a {
+      padding-left: $small-spacing;
+      max-width: 7em;
+    }
+    &:nth-child(3) a,
+    &:nth-child(4) a,
+    &:nth-child(5) a {
+      line-height: 2;
+    }
+    &:nth-child(4) a {
+      max-width: 11em;
+    }
+    &:last-of-type a {
+      padding-right: $small-spacing;
+      &:before,
+      &:after {
+        display: none
+      }
+    }
+
+    a:hover {
+
+    }
+  }
+}
