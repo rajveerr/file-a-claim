@@ -1,57 +1,17 @@
 .header-container {
-	@include outer-container();
-	@include fill-parent();
-	@include row(table);
-	border-bottom: 1px solid darken($lightest-gray, 15%);
-  margin-bottom: $small-spacing;
-	h1 {
-		position: absolute;
-		display: inline-block;
-    font-size: 1.7rem;
-    padding: 0.65em $small-spacing;
-    color: $white;
-		top: -45px;
-		z-index: 3;
-		left: 30px;
-		margin: 0;
-	}
-	.icono-caretRight {
-		zoom: 64%;
-		top: -2px;
-		margin-right: 15px;
-		color: gray;
-	}
-	.module-controls,
-	.actions-container {
-		padding: 0.6em $small-spacing;
-		margin: 0;
-		line-height: 1.9;
-		vertical-align: top;
-		white-space: nowrap;
-	}
-	.drawer-toggle {
-		position: absolute;
-		width: $drawer-link-width;
-		right: 0;
-		height: 4.4rem;
-		line-height: 2.6rem;
-		padding: 0.6em $small-spacing;
-		background-color: darken($lightest-gray, 3%);
-	}
-	.module-controls {
-		@include span-columns(12);
-	}
-	.actions-container {
-		@include span-columns(12);
-		@include reset-display;
-		text-align: right;
-		@extend %single-row-form;
-	}
-	button {
-		vertical-align: middle;
-	}
-}
-
-dashboard .header-container {
-	padding-right: $drawer-link-width;
+		position: fixed;
+		width: 100%;
+		height: 50px;
+		background-color: white;
+		border-bottom: 1px solid $medium-gray;
+		z-index: 4;
+		.logo {
+	    width: 108px;
+	    height: 49px;
+			margin: 0 auto;
+			background: transparent url('../images/retina-sprite.png') 0 no-repeat;
+	    background-size: 146px 387px;
+	    background-position: -14px -5px;
+	    text-indent: -119988px;
+		}
 }

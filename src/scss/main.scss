@@ -27,14 +27,11 @@
 
 /* Molecules */
 @import "molecules/breadcrumb";
+@import "molecules/icons";
 @import "molecules/main-nav";
 @import "molecules/table";
-@import "molecules/tab-bar";
-@import "molecules/card-list";
-@import "molecules/expand-collapse-css";
 @import "molecules/input-and-button";
 @import "molecules/flashes";
-@import "molecules/css-dropdown";
 
 
 /* Organisms */
@@ -63,6 +60,10 @@ body {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+}
+
+body {
+	background-color: $lightest-gray;	
 }
 
 *,

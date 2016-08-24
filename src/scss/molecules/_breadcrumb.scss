@@ -3,15 +3,18 @@
   overflow: hidden;
   font-family: $semiBold-font-family;
   font-size: 1.2rem;
+  background-color: $medium-gray;
+  &.finished {
+    background-color: $orange;
+  }
   li {
     float: left;
+    width: 25%;
     a {
       color: white;
       text-decoration: none;
       padding: $small-spacing 0 $small-spacing 29px;
       background-color: $orange;
-      max-width: 5em;
-      min-height: 3.5em;
       position: relative;
       display: block;
       float: left;
@@ -48,10 +51,10 @@
         z-index: 1;
       }
       &.pending {
-        background-color: $lightest-gray;
+        background-color: $medium-gray;
         color: $light-gray;
         &:after {
-          border-left: 30px solid $lightest-gray;
+          border-left: 30px solid $medium-gray;
         }
       }
     }
@@ -72,6 +75,7 @@
       max-width: 11em;
     }
     &:last-of-type a {
+      padding-left: .6em;
       padding-right: $small-spacing;
       &:before,
       &:after {

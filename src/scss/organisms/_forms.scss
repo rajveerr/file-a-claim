@@ -1,13 +1,12 @@
 fieldset {
   display: inline-block;
-  border-top: 1px solid darken($lightest-gray, 10%);
+  border-top: 1px dashed darken($lightest-gray, 10%);
   margin: 0 0 $base-spacing;
   padding: $small-spacing 0 0;
   border-radius: 1px;
   min-width: 100%;
   p {
-    margin-bottom: $small-spacing;
-    padding-left: $base-spacing;
+    margin-bottom: $base-spacing;
     &:last-of-type {
         margin-bottom: $small-spacing;
     }
@@ -17,8 +16,7 @@ fieldset {
 .form-footer {
   @include outer-container();
   margin: $base-spacing 0 0 0;
-  background-color: white;
-  padding: $small-spacing $base-spacing;
+  padding: $small-spacing 0;
   border-top: 1px solid darken($lightest-gray, 10%);
   &:last-of-type {
     margin-bottom: 0;
@@ -45,8 +43,10 @@ legend {
 }
 
 label {
+  font-family: $semiBold-font-family;
   display: block;
-  color: #000;
+  color: lighten($dark-gray, 10%);
+  padding-bottom: $small-spacing/2;
 }
 
 input,
@@ -69,13 +69,13 @@ textarea {
   margin-right: $small-spacing / 2;
 }
 
-input:focus:invalid,
-textarea:focus:invalid,
-select:focus:invalid,
-select:focus:invalid {
-  border-color: $red;
-  outline: 0;
-}
+// input:focus:invalid,
+// textarea:focus:invalid,
+// select:focus:invalid,
+// select:focus:invalid {
+//   border-color: $red;
+//   outline: 0;
+// }
 
 %single-row-form {
   label,

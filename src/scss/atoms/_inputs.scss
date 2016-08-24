@@ -1,19 +1,19 @@
 input[type='text'], input[type='number'], input[type='tel'],
 input[type='date'], input[type='password'], input[type='file'],
-input[type='tel'], input[type='email'], textarea {
-  border: 1px solid lighten($light-gray, 50%);
+input[type='tel'], input[type='email'], textarea, .radio-container, .checkbox-container {
+  border: 0;
   background: $white;
-  color: $light-gray;
-  padding: 0.3em $small-spacing/2;
-  border-radius: $base-border-radius;
+  font-family: $light-font-family;
+  color: lighten($dark-gray, 10%);
+  padding: $small-spacing;
   -webkit-appearance:none;
-  min-width: 24rem;
+  min-width: 100%;
   font-size: 1.4rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   &:hover{
     cursor: text;
   }
   &:focus {
-    border-color: lighten($light-gray, 20%);
     outline: none;
   }
   &:disabled {

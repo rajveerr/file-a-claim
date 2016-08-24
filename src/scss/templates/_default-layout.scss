@@ -4,7 +4,7 @@
 }
 
 .page-component {
-	padding: $small-spacing;
+	padding: $base-spacing*3 $small-spacing $small-spacing $small-spacing;
 	&.graph-container {
 		padding-top: 0;
 	}

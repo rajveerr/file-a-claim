@@ -7,10 +7,10 @@ html(lang="en")
   meta(name='viewport', content='width=device-width')
   body
     .header-container
-      h1
-        a(href='http://bradfrost.com/blog/post/atomic-web-design/') Atomic Design      
+      a(href="javascript:void(0)", class='menu toggle')
+      h1(class='logo') Aflac : File a Claim
     .wrapper.page-component
-      h1.main-title Atoms
+      //- h2.main-title Atoms
       fieldset.plain-fieldset
         legend Font Family        
         p.font-thin Proxima Nova Thin
@@ -107,7 +107,7 @@ html(lang="en")
               a.pending(href='#') 
                 span Acknowledge
         p
-          ul.breadcrumb
+          ul.breadcrumb.finished
             li
               a(href='#') 
                 span Select Patient &amp; Claim Type
@@ -131,9 +131,24 @@ html(lang="en")
           span.spinner
       fieldset.plain-fieldset
         legend Icons
-        i.icono-plus
-        i.icono-check
-        i.icono-cross
+        .row
+          .the-icons.span3(title='Code: 0xe800')
+            i.demo-icon.icon-left-open 0xe800
+            span.i-name icon-left-open
+            span.i-code 0xe800
+          .the-icons.span3(title='Code: 0xe801')
+            i.demo-icon.icon-right-open 0xe801
+            span.i-name icon-right-open
+            span.i-code 0xe801
+          .the-icons.span3(title='Code: 0xe802')
+            i.demo-icon.icon-attention 0xe802
+            span.i-name icon-attention
+            span.i-code 0xe802
+          .the-icons.span3(title='Code: 0xe803')
+            i.demo-icon.icon-ok 0xe803
+            span.i-name icon-ok
+            span.i-code 0xe803
+
       fieldset.plain-fieldset
         legend Tables
         table.table-minimal(cellspacing='0', cellpadding='0')
@@ -156,157 +171,72 @@ html(lang="en")
               td Division 2
               td Division 3
       hr
-      h1.main-title Molecules
-      fieldset.plain-fieldset
-        legend#combinedInputButton CSS Dropdown
-        ul.css-dropdown-wrap
-          li.current-menu-item
-            | Interval 2 
-            span (8200-8600 ft)
-            ul
-              li
-                | Interval 1 
-                span (8600-9000 ft)
-              li
-                | Interval 3 
-                span (7900-8200 ft)
-      fieldset.plain-fieldset
-        legend#combinedInputButton Combined input and button
-        form
-          p.input-and-button-container
-            label InterACT Path
-            input#text_field(type='text', pattern='[a-zA-Z0-9\s\/]+', required='')
-            button.btn-secondary.light Connect
-      fieldset.plain-fieldset
-        legend#combinedInputButton Inline Spinner
-        p.input-and-button-container
-          label InterACT Path
-          input#text_field(type='text', disabled='disabled')
-          button.btn-secondary.light(disabled='disabled') Connect
-          span.spinner-container
-            span.spinner
-      fieldset.plain-fieldset
-        legend#combinedInputButton Inline error
-        p.input-and-button-container
-          label InterACT Path
-          input#text_field(type='text', value='path...')
-          button.btn-secondary.light Connect
-          i.icono-cross
-          span.error Error message
-      fieldset.plain-fieldset
-        legend#combinedInputButton Inline success
-        p.input-and-button-container
-          label InterACT Path
-          input#text_field(type='text', value='path...')
-          button.btn-secondary.light Connect
-          i.icono-check
-          span.success Success message
-      fieldset.plain-fieldset
-        legend#combinedInputButton Flashes
-        .flash.success Success message goes here...
-        .flash.alert Alert message goes here...
-        .flash.warning Warning message goes here...
-      fieldset.plain-fieldset
-        legend#card Card
-        .card
-          | content...
-      fieldset.plain-fieldset
-        legend Card list
-        .card-list
-          dl
-            dt BHP
-            dd 0 psi
-          dl
-            dt WHP
-            dd 0 psi
-          dl
-            dt Barrels pumped
-            dd 0
-          dl
-            dt Proppant pumped
-            dd 0
-          dl
-            dt Slurry rate
-            dd 0 bbl/min
-          dl
-            dt Proppant concentration
-            dd 0 lbm/gal
-      fieldset.plain-fieldset
-        legend#tabs-bar Tab bar
-        ul.tab-bar
-          li
-            a.tab-bar-item.tab-bar_active(href='javascript:void(0)') Active
-          li
-            a.tab-bar-item(href='javascript:void(0)') Tab 2
-          li
-            a.tab-bar-item(href='javascript:void(0)') Tab 3
-      fieldset.plain-fieldset
-        legend#form_elements CSS expand/collapse (show by default)
-        .expand-collapse-container
-          input#expandCollpase.expand-collpase-state(type='checkbox')
-          label.expand-collpase-trigger(for='expandCollpase', title='show/hide section')
-          .expand-collpase-target
-            | Content goes here...
+      h2.main-title Molecules
       fieldset.plain-fieldset
         legend#form_elements Form Element
         form
           p
-            label(for='text_field') Text Field:
+            label(for='text_field') Text Field
             input#text_field(type='text')
           p
-            label(for='text_area') Text Area:
+            label(for='text_area') Text Area
             textarea#text_area
           p
-            label(for='select_element') Select Element:
-            select(name='select_element')
-              optgroup(label='Option Group 1')
-                option(value='1') Option 1
-                option(value='2') Option 2
-                option(value='3') Option 3
-              optgroup(label='Option Group 2')
-                option(value='1') Option 1
-                option(value='2') Option 2
-                option(value='3') Option 3
+            label(for='select_element') Select Element
+            .select-wrapper
+              select(name='select_element')
+                optgroup(label='Option Group 1')
+                  option(value='1') Option 1
+                  option(value='2') Option 2
+                  option(value='3') Option 3
+                optgroup(label='Option Group 2')
+                  option(value='1') Option 1
+                  option(value='2') Option 2
+                  option(value='3') Option 3
           p
-            label(for='radio_buttons') Radio Buttons:
-            label
+            label(for='when') Date
+            input#when(name='when', type='date', min='2016-01-01', max='2016-12-01')
+
+          p
+            label(for='radio_buttons') Radio Buttons
+            label.radio-container
               input.radio(type='radio', name='radio_button', value='radio_1')
               |  Radio 1
-            label
+            label.radio-container
               input.radio(type='radio', name='radio_button', value='radio_2')
               |  Radio 2
-            label
+            label.radio-container
               input.radio(type='radio', name='radio_button', value='radio_3')
               |  Radio 3
           p
-            label(for='checkboxes') Checkboxes:
-            label
+            label(for='checkboxes') Checkboxes
+            label.checkbox-container
               input.checkbox(type='checkbox', name='checkboxes', value='check_1')
               |  Checkbox 1
-            label
+            label.checkbox-container
               input.checkbox(type='checkbox', name='checkboxes', value='check_2')
               |  Checkbox 2
-            label
+            label.checkbox-container
               input.checkbox(type='checkbox', name='checkboxes', value='check_3')
               |  Checkbox 3
           p
-            label(for='password') Password:
+            label(for='password') Password
             input.password(type='password', name='password')
           p
             label(for='file') File Input:
             input.file(type='file', name='file')
       hr
-      h1.main-title Organisms
+      h2.main-title Organisms
       fieldset.plain-fieldset
         legend#form_elements Default Form
         h2 Form Title
         form
           fieldset
             p
-              label(for='text_field') Text Field:
+              label(for='text_field') Text Field
               input#text_field(type='text', pattern='[a-zA-Z0-9\s\/]+', required='')
             p
-              label(for='select_element-required') Select Element:
+              label(for='select_element-required') Select Element
               span.select-wrapper
                 select(name='select_element-required', required='')
                   option(value='') Please select
@@ -317,42 +247,29 @@ html(lang="en")
                   option(value='2') Option 2
                   option(value='3') Option 3
             p
-              label(for='radio_buttons') Radio Buttons:
-              label
+              label(for='radio_buttons') Radio Buttons
+              label.radio-container
                 input.radio(type='radio', name='radio_button', value='radio_1', required='')
                 |  Radio 1
-              label
+              label.radio-container
                 input.radio(type='radio', name='radio_button', value='radio_2')
                 |  Radio 2
-              label
+              label.radio-container
                 input.radio(type='radio', name='radio_button', value='radio_3')
                 |  Radio 3
             p
-              label(for='checkboxes') Checkboxes:
-              label
+              label(for='checkboxes') Checkboxes
+              label.checkbox-container
                 input.checkbox(type='checkbox', name='checkboxes', value='check_1', required='')
                 |  Checkbox 1
-              label
+              label.checkbox-container
                 input.checkbox(type='checkbox', name='checkboxes', value='check_2')
                 |  Checkbox 2
-              label
+              label.checkbox-container
                 input.checkbox(type='checkbox', name='checkboxes', value='check_3')
                 |  Checkbox 3
             p.form-footer
               span.secondary-actions
-                button.btn-danger Cancel
+                button.btn-secondary Cancel
               span.primary-actions
-                a.link-btn(href='javascript:void(0)') Link action
-                button Submit
-      fieldset.plain-fieldset
-        legend#single_row_form Single row form
-        .bands-container
-          label Start date
-          input(type='text', size='42')
-          label End date
-          input(type='text', size='42')
-          label Top depth
-          input(type='number', size='5', style='width: 7rem;')
-          label Btm depth
-          input(type='number', size='5', style='width: 7rem;')
-          button.btn-secondary.light Show
+                button Next

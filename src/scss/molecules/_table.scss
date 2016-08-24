@@ -34,7 +34,7 @@
       font-family: $base-font-family;
       color: black;
       &:first-child {
-        padding-left: 0;
+        padding-left: $small-spacing;
       }
     }
   }
@@ -59,7 +59,7 @@
         padding: 0.3em 1em;
       }
       &:first-child {
-        padding-left: 0;
+        padding-left: $small-spacing;
       }
     }
   }
