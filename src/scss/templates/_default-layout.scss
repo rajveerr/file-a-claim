@@ -1,0 +1,45 @@
+.main-body {
+  @include outer-container();
+  position: relative;
+}
+
+.page-component {
+	padding: $small-spacing;
+	&.graph-container {
+		padding-top: 0;
+	}
+  @include media($above-wide) {
+      width: 50%;
+  }
+}
+
+.card {
+  @include outer-container;
+  border: 1px solid lighten($light-gray, 60%);
+  padding: $small-spacing;
+  margin: $small-spacing $small-spacing 0 $small-spacing;
+}
+
+// icons
+
+.icono-cross,
+.error {
+	color: lighten($light-gray, 15%);
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
+}
+
+i.icono-check,
+.success {
+	color: $green;
+	&:before {
+		left: 54%;
+	}
+}
+
+
+.hidden {
+  display: none !important;
+}

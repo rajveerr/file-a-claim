@@ -1,0 +1,87 @@
+button,
+input[type=submit],
+a.btn-link,
+a.btn-link:active,
+a.btn-link:visited {
+  position: relative;
+  border-radius: $base-border-radius;
+  padding: $small-spacing/2 1rem;
+  cursor: pointer;
+  background-color: $medium-blue;
+  font-family: $light-font-family;
+  font-size: $base-font-size;
+  color: $white;
+  min-width: 10rem;
+  margin-right: $small-spacing/2;
+  text-transform: uppercase;
+  border: 0;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+  outline: none;
+  white-space: nowrap;
+  &:hover {
+    text-decoration: none;
+    [class*="icono-"] {
+      color: $medium-blue;
+    }
+  }
+  &:active {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  }
+  &:disabled {
+    background-color: $lightest-gray !important;
+    color: lighten($light-gray, 30%);
+    cursor: not-allowed;
+    [class*="icono-"] {
+      color: $light-gray;
+    }
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+  &[hidden] {
+    display: none !important;
+  }
+}
+
+.btn-secondary {
+  background-color: $medium-blue;
+  color: $white;
+  box-shadow: none;
+  text-transform: none;
+  font-size: 1.3rem;
+  font-family: $base-font-family;
+  padding: $small-spacing/2 $small-spacing;
+  min-width: auto;
+  vertical-align: top;
+  &:hover {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+  }
+  &.light {
+    background-color: white;
+    border: 1px solid darken($lightest-gray, 10%);
+    color: $dark-gray;
+    box-shadow: inset -1px -3px 7px darken($lightest-gray, 5%);
+    &:hover {
+      box-shadow: none;
+    }
+    .icono-plus,
+    .icono-cross {
+  	    width: 14px;
+  	    height: 14px;
+  	    margin: 0 2px 0 0;
+  	    &:before {
+      		width: 11px;
+  	    }
+  	    &:after {
+  	    	height: 11px;
+  	    }
+  	}
+  }
+}
+
+.btn-danger {
+  background-color: $red;
+  border-color: $red;
+  &:hover {
+  }
+}
