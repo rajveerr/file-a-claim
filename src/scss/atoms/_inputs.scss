@@ -9,6 +9,7 @@ input[type='tel'], input[type='email'], textarea, .radio-container, .checkbox-co
   -webkit-appearance:none;
   min-width: 100%;
   font-size: 1.4rem;
+  border-radius: 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   &:hover{
     cursor: text;

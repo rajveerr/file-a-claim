@@ -160,6 +160,7 @@ input[type='tel'], input[type='email'], textarea, .radio-container, .checkbox-co
   -webkit-appearance: none;
   min-width: 100%;
   font-size: 1.4rem;
+  border-radius: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
   input[type='text']:hover, input[type='number']:hover, input[type='tel']:hover,
   input[type='date']:hover, input[type='password']:hover, input[type='file']:hover,
@@ -1053,6 +1054,7 @@ html {
 
 body,
 .wrapper {
+  position: relative;
   background-color: #E9EFF0; }
 
 *,
