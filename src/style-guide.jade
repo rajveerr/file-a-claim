@@ -3,312 +3,279 @@ html(lang="en")
   head
   title
     | Aflac : File a Claim
-  link(href='/css/main.css', rel='stylesheet')
+  link(href='/css/main.css', rel='stylesheet')  
   meta(name='viewport', content='width=device-width')
   body
-    .header-container
-      a(href="javascript:void(0)", class='menu toggle')
-      h1(class='logo') Aflac : File a Claim
-    .wrapper.page-component
-      //- h2.main-title Atoms
-      fieldset.plain-fieldset
-        legend Font Family        
-        p.font-thin Proxima Nova Thin
-        p.font-light Proxima Nova Light
-        p.font-italic Proxima Nova Regular
-        p.font-semi-bold Proxima Nova Semibold
-        p.font-bold Proxima Nova Bold
-        
-      fieldset.plain-fieldset
-        legend Block Text
-        h1 H1 Heading
-        h2 H2 Heading
-        h3 H3 Heading
-        //
-          <h4>h4. Heading</h4>
-          <h5>h5. Heading</h5>
-          <h6>h6. Heading</h6>
-        strong#paragraph Paragraph
-        p
-          | Lorem ipsum dolor sit amet, 
-          a(href='#', title='test link') test link
-          |  adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
-        p
-          | Lorem ipsum dolor sit amet, 
-          em emphasis
-          |  consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
-      fieldset.plain-fieldset
-        legend List Types
-        dl
-          dt Definition List Title
-          dd This is a definition list division.
-        strong Ordered List
-        ol
-          li List Item 1
-          li List Item 2
-          li List Item 3
-        strong Unordered List
+    #container
+      .header-container
+        a#hamburger(href="javascript:void(0)", class='icon-menu')
+        h1(class='logo') Aflac : File a Claim
+      nav
         ul
-          li List Item 1
-          li List Item 2
-          li List Item 3
-        strong Ordered List
-        ol.default
-          li List Item 1
-          li List Item 2
-          li List Item 3
-        strong Unordered List
-        ul.default
-          li List Item 1
-          li List Item 2
-          li List Item 3
-      fieldset.plain-fieldset
-        legend Buttons
-        p
-          button Primary
-        p
-          button.btn-arrow-right Primary with Arrow
-        p
-          button(disabled=true) Disabled
-        p
-          button.btn-secondary Secondary
-        p
-          button.btn-secondary.btn-arrow-left Secondary with Arrow
-        p
-          button.btn-secondary(disabled=true) Disabled
-      fieldset.plain-fieldset
-        legend Breadcrumb
-        p
-          ul.breadcrumb
-            li
-              a(href='#') 
-                span Select Patient &amp; Claim Type
-            li
-              a.pending(href='#') 
-                span Claim Detail
-            li
-              a.pending(href='#') 
-                span Review
-            li
-              a.pending(href='#') 
-                span Acknowledge
-        p
-          ul.breadcrumb
-            li
-              a(href='#') 
-                span Select Patient &amp; Claim Type
-            li
-              a(href='#') 
-                span Claim Detail
-            li
-              a.pending(href='#') 
-                span Review
-            li
-              a.pending(href='#') 
-                span Acknowledge
-        p
-          ul.breadcrumb.finished
-            li
-              a(href='#') 
-                span Select Patient &amp; Claim Type
-            li
-              a(href='#') 
-                span Claim Detail
-            li
-              a(href='#') 
-                span Review
-            li
-              a(href='#') 
-                span Acknowledge
-      fieldset.plain-fieldset
-        legend Links
-        |     This is a 
-        a(href='javascript:void(0)') default link
-        |  style.
-      fieldset.plain-fieldset
-        legend Spinner
-        p
-          i.icon-spin6.animate-spin
-      fieldset.plain-fieldset
-        legend Icons
-        .icons-container
+          li
+            a(href='#') File a Claim
+          li
+            a(href='#') Products
+          li
+            a(href='#') What We Do
+          li
+            a(href='#') Contact
+          li
+            a(href='#') Search
+          li
+            button.btn-secondary Contact            
+      #contentLayer
+      #content.wrapper.page-component
+        //- h2.main-title Atoms
+        fieldset.plain-fieldset
+          legend Font Family        
+          p.font-thin Proxima Nova Thin
+          p.font-light Proxima Nova Light
+          p.font-italic Proxima Nova Regular
+          p.font-semi-bold Proxima Nova Semibold
+          p.font-bold Proxima Nova Bold
+          
+        fieldset.plain-fieldset
+          legend Block Text
+          h1 H1 Heading
+          h2 H2 Heading
+          h3 H3 Heading
+          //
+            <h4>h4. Heading</h4>
+            <h5>h5. Heading</h5>
+            <h6>h6. Heading</h6>
+          strong#paragraph Paragraph
           p
-            i.demo-icon.icon-left-open 
-            | arrow left
+            | Lorem ipsum dolor sit amet, 
+            a(href='#', title='test link') test link
+            |  adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
           p
-            i.demo-icon.icon-right-open
-            | arrow right
+            | Lorem ipsum dolor sit amet, 
+            em emphasis
+            |  consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+        fieldset.plain-fieldset
+          legend List Types
+          dl
+            dt Definition List Title
+            dd This is a definition list division.
+          strong Ordered List
+          ol
+            li List Item 1
+            li List Item 2
+            li List Item 3
+          strong Unordered List
+          ul
+            li List Item 1
+            li List Item 2
+            li List Item 3
+          strong Ordered List
+          ol.default
+            li List Item 1
+            li List Item 2
+            li List Item 3
+          strong Unordered List
+          ul.default
+            li List Item 1
+            li List Item 2
+            li List Item 3
+        fieldset.plain-fieldset
+          legend Buttons
           p
-            i.demo-icon.icon-attention 
-            | attention
+            button Primary
           p
-            i.demo-icon.icon-ok
-            | ok
+            button.btn-arrow-right Primary with Arrow
           p
-            i.demo-icon.icon-cancel
-            | cancel
+            button(disabled=true) Disabled
           p
-            i.demo-icon.icon-ok-circled 
-            | ok-circled
+            button.btn-secondary Secondary
           p
-            i.demo-icon.icon-cancel-circled 
-            | cancel-circled
+            button.btn-secondary.btn-arrow-left Secondary with Arrow
           p
-            i.demo-icon.icon-plus-circled 
-            | plus-circled
+            button.btn-secondary(disabled=true) Disabled
+        fieldset.plain-fieldset
+          legend Breadcrumb
           p
-            i.demo-icon.icon-minus-circled 
-            | minus-circled            
+            ul.breadcrumb
+              li
+                a(href='#') 
+                  span Select Patient &amp; Claim Type
+              li
+                a.pending(href='#') 
+                  span Claim Detail
+              li
+                a.pending(href='#') 
+                  span Review
+              li
+                a.pending(href='#') 
+                  span Acknowledge
           p
-            i.demo-icon.icon-menu 
-            | menu
+            ul.breadcrumb
+              li
+                a(href='#') 
+                  span Select Patient &amp; Claim Type
+              li
+                a(href='#') 
+                  span Claim Detail
+              li
+                a.pending(href='#') 
+                  span Review
+              li
+                a.pending(href='#') 
+                  span Acknowledge
           p
-            i.demo-icon.icon-lightbulb 
-            | lightbulb
+            ul.breadcrumb.finished
+              li
+                a(href='#') 
+                  span Select Patient &amp; Claim Type
+              li
+                a(href='#') 
+                  span Claim Detail
+              li
+                a(href='#') 
+                  span Review
+              li
+                a(href='#') 
+                  span Acknowledge
+        fieldset.plain-fieldset
+          legend Links
+          |     This is a 
+          a(href='javascript:void(0)') default link
+          |  style.
+        fieldset.plain-fieldset
+          legend Spinner
           p
-            i.demo-icon.icon-ambulance 
-            | ambulance
-          p
-            i.demo-icon.icon-medkit 
-            | medkit
-          p
-            i.demo-icon.icon-angle-left 
-            | angle-left
-          p
-            i.demo-icon.icon-angle-right 
-            | angle-right
-          p
-            i.demo-icon.icon-angle-up 
-            | angle-up
-          p
-            i.demo-icon.icon-angle-down 
-            | angle-down
-          p
-            i.demo-icon.icon-smile 
-            | smile
-          p
-            i.demo-icon.icon-frown 
-            | frown
-          p
-            i.demo-icon.icon-meh 
-            | meh
-          p
-            i.demo-icon.icon-direction 
-            | direction
-          p
-            i.demo-icon.icon-tty 
-            | tty
-          p
-            i.demo-icon.icon-commenting 
-            | commenting
-          p
-            i.demo-icon.icon-volume-control-phone 
-            | phone
-          p
-            i.demo-icon.icon-font-awesome 
-            | flag
+            i.icon-spin6.animate-spin
+        fieldset.plain-fieldset
+          legend Icons
+          .icons-container
+            p
+              i.demo-icon.icon-left-open 
+              | arrow left
+            p
+              i.demo-icon.icon-right-open
+              | arrow right
+            p
+              i.demo-icon.icon-attention 
+              | attention
+            p
+              i.demo-icon.icon-ok
+              | ok
+            p
+              i.demo-icon.icon-cancel
+              | cancel
+            p
+              i.demo-icon.icon-ok-circled 
+              | ok-circled
+            p
+              i.demo-icon.icon-cancel-circled 
+              | cancel-circled
+            p
+              i.demo-icon.icon-plus-circled 
+              | plus-circled
+            p
+              i.demo-icon.icon-minus-circled 
+              | minus-circled            
+            p
+              i.demo-icon.icon-menu 
+              | menu
+            p
+              i.demo-icon.icon-lightbulb 
+              | lightbulb
+            p
+              i.demo-icon.icon-ambulance 
+              | ambulance
+            p
+              i.demo-icon.icon-medkit 
+              | medkit
+            p
+              i.demo-icon.icon-angle-left 
+              | angle-left
+            p
+              i.demo-icon.icon-angle-right 
+              | angle-right
+            p
+              i.demo-icon.icon-angle-up 
+              | angle-up
+            p
+              i.demo-icon.icon-angle-down 
+              | angle-down
+            p
+              i.demo-icon.icon-smile 
+              | smile
+            p
+              i.demo-icon.icon-frown 
+              | frown
+            p
+              i.demo-icon.icon-meh 
+              | meh
+            p
+              i.demo-icon.icon-direction 
+              | direction
+            p
+              i.demo-icon.icon-tty 
+              | tty
+            p
+              i.demo-icon.icon-commenting 
+              | commenting
+            p
+              i.demo-icon.icon-volume-control-phone 
+              | phone
+            p
+              i.demo-icon.icon-font-awesome 
+              | flag
 
-      fieldset.plain-fieldset
-        legend Tables
-        table.table-minimal(cellspacing='0', cellpadding='0')
-          thead
-            tr
-              th Table Header 1
-              th Table Header 2
-              th Table Header 3
-          tbody
-            tr
-              td Division 1
-              td Division 2
-              td Division 3
-            tr.even
-              td Division 1
-              td Division 2
-              td Division 3
-            tr
-              td Division 1
-              td Division 2
-              td Division 3
-      hr
-      h2.main-title Molecules
-      fieldset.plain-fieldset
-        legend#form_elements Form Element
-        form
-          p
-            label(for='text_field') Text Field
-            input#text_field(type='text')
-          p
-            label(for='text_area') Text Area
-            textarea#text_area
-          p
-            label(for='select_element') Select Element
-            .select-wrapper
-              select(name='select_element')
-                optgroup(label='Option Group 1')
-                  option(value='1') Option 1
-                  option(value='2') Option 2
-                  option(value='3') Option 3
-                optgroup(label='Option Group 2')
-                  option(value='1') Option 1
-                  option(value='2') Option 2
-                  option(value='3') Option 3
-          p
-            label(for='when') Date
-            input#when(name='when', type='date', min='2016-01-01', max='2016-12-01')
-
-          p
-            label(for='radio_buttons') Radio Buttons
-            label.radio-container
-              input.radio(type='radio', name='radio_button', value='radio_1')
-              |  Radio 1
-            label.radio-container
-              input.radio(type='radio', name='radio_button', value='radio_2')
-              |  Radio 2
-            label.radio-container
-              input.radio(type='radio', name='radio_button', value='radio_3')
-              |  Radio 3
-          p
-            label(for='checkboxes') Checkboxes
-            label.checkbox-container
-              input.checkbox(type='checkbox', name='checkboxes', value='check_1')
-              |  Checkbox 1
-            label.checkbox-container
-              input.checkbox(type='checkbox', name='checkboxes', value='check_2')
-              |  Checkbox 2
-            label.checkbox-container
-              input.checkbox(type='checkbox', name='checkboxes', value='check_3')
-              |  Checkbox 3
-          p
-            label(for='password') Password
-            input.password(type='password', name='password')
-          p
-            label(for='file') File Input:
-            input.file(type='file', name='file')
-      hr
-      h2.main-title Organisms
-      fieldset.plain-fieldset
-        legend#form_elements Default Form
-        h2 Form Title
-        form
-          fieldset
+        fieldset.plain-fieldset
+          legend Tables
+          table.table-minimal(cellspacing='0', cellpadding='0')
+            thead
+              tr
+                th Table Header 1
+                th Table Header 2
+                th Table Header 3
+            tbody
+              tr
+                td Division 1
+                td Division 2
+                td Division 3
+              tr.even
+                td Division 1
+                td Division 2
+                td Division 3
+              tr
+                td Division 1
+                td Division 2
+                td Division 3
+        hr
+        h2.main-title Molecules
+        fieldset.plain-fieldset
+          legend#form_elements Form Element
+          form
             p
               label(for='text_field') Text Field
-              input#text_field(type='text', pattern='[a-zA-Z0-9\s\/]+', required='')
+              input#text_field(type='text')
             p
-              label(for='select_element-required') Select Element
-              span.select-wrapper
-                select(name='select_element-required', required='')
-                  option(value='') Please select
-                  option(value='1') Option 1
-                  option(value='2') Option 2
-                  option(value='3') Option 3
-                  option(value='1') Option 1
-                  option(value='2') Option 2
-                  option(value='3') Option 3
+              label(for='text_area') Text Area
+              textarea#text_area
+            p
+              label(for='select_element') Select Element
+              .select-wrapper
+                select(name='select_element')
+                  optgroup(label='Option Group 1')
+                    option(value='1') Option 1
+                    option(value='2') Option 2
+                    option(value='3') Option 3
+                  optgroup(label='Option Group 2')
+                    option(value='1') Option 1
+                    option(value='2') Option 2
+                    option(value='3') Option 3
+            p
+              label(for='when') Date
+              input#when(name='when', type='date', min='2016-01-01', max='2016-12-01')
+
             p
               label(for='radio_buttons') Radio Buttons
               label.radio-container
-                input.radio(type='radio', name='radio_button', value='radio_1', required='')
+                input.radio(type='radio', name='radio_button', value='radio_1')
                 |  Radio 1
               label.radio-container
                 input.radio(type='radio', name='radio_button', value='radio_2')
@@ -319,7 +286,7 @@ html(lang="en")
             p
               label(for='checkboxes') Checkboxes
               label.checkbox-container
-                input.checkbox(type='checkbox', name='checkboxes', value='check_1', required='')
+                input.checkbox(type='checkbox', name='checkboxes', value='check_1')
                 |  Checkbox 1
               label.checkbox-container
                 input.checkbox(type='checkbox', name='checkboxes', value='check_2')
@@ -327,11 +294,60 @@ html(lang="en")
               label.checkbox-container
                 input.checkbox(type='checkbox', name='checkboxes', value='check_3')
                 |  Checkbox 3
-            p.form-footer
-              span.secondary-actions
-                button.btn-secondary Cancel
-              span.primary-actions
-                button Next
+            p
+              label(for='password') Password
+              input.password(type='password', name='password')
+            p
+              label(for='file') File Input:
+              input.file(type='file', name='file')
+        hr
+        h2.main-title Organisms
+        fieldset.plain-fieldset
+          legend#form_elements Default Form
+          h2 Form Title
+          form
+            fieldset
+              p
+                label(for='text_field') Text Field
+                input#text_field(type='text', pattern='[a-zA-Z0-9\s\/]+', required='')
+              p
+                label(for='select_element-required') Select Element
+                span.select-wrapper
+                  select(name='select_element-required', required='')
+                    option(value='') Please select
+                    option(value='1') Option 1
+                    option(value='2') Option 2
+                    option(value='3') Option 3
+                    option(value='1') Option 1
+                    option(value='2') Option 2
+                    option(value='3') Option 3
+              p
+                label(for='radio_buttons') Radio Buttons
+                label.radio-container
+                  input.radio(type='radio', name='radio_button', value='radio_1', required='')
+                  |  Radio 1
+                label.radio-container
+                  input.radio(type='radio', name='radio_button', value='radio_2')
+                  |  Radio 2
+                label.radio-container
+                  input.radio(type='radio', name='radio_button', value='radio_3')
+                  |  Radio 3
+              p
+                label(for='checkboxes') Checkboxes
+                label.checkbox-container
+                  input.checkbox(type='checkbox', name='checkboxes', value='check_1', required='')
+                  |  Checkbox 1
+                label.checkbox-container
+                  input.checkbox(type='checkbox', name='checkboxes', value='check_2')
+                  |  Checkbox 2
+                label.checkbox-container
+                  input.checkbox(type='checkbox', name='checkboxes', value='check_3')
+                  |  Checkbox 3
+              p.form-footer
+                span.secondary-actions
+                  button.btn-secondary Cancel
+                span.primary-actions
+                  button Next
 style.
   .icons-container p {
     margin-bottom: 8px;
@@ -341,3 +357,7 @@ style.
     margin-right: .5em;
     font-size: 2rem;
   }
+
+script(src='/javascript/vendors/jquery-3.1.0.min.js')
+script(src='/javascript/vendors/jquery-ui.min.js')
+script(src='/javascript/global-scripts.js')

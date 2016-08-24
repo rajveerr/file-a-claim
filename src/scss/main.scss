@@ -60,10 +60,12 @@ body {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+	overflow-y: scroll;
 }
 
-body {
-	background-color: $lightest-gray;	
+body,
+.wrapper {
+	background-color: $lightest-gray;
 }
 
 *,
