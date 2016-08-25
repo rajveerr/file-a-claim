@@ -23,6 +23,7 @@ jQuery(document).ready(function () {
 
         //set the content with the width that it has originally
         jQuery('#content').css('width', contentWidth);
+        jQuery(this).addClass('active');
 
         //display a layer to disable clicking and scrolling on the content while menu is shown
         jQuery('#contentLayer').css('display', 'block');
@@ -44,6 +45,7 @@ jQuery(document).ready(function () {
 
         //enable all scrolling on mobile devices when menu is closed
         jQuery('#container').unbind('touchmove');
+        jQuery('#hamburger').removeClass('active');
 
         //set margin for the whole container back to original state with a jquery UI animation
         jQuery("#container").animate({"marginLeft": ["-1", 'easeOutExpo']}, {

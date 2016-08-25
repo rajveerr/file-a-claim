@@ -925,6 +925,8 @@ nav {
     font-size: 2.5rem;
     padding: 6px 14px;
     color: #00a9d0; }
+    .header-container .icon-menu.active {
+      background-color: #E9EFF0; }
 
 fieldset {
   display: inline-block;
