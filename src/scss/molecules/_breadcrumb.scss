@@ -4,11 +4,12 @@
 .breadcrumb {
   list-style: none;
   overflow: hidden;
+  height: 4.2rem;
   font-family: $semiBold-font-family;
   font-size: 1.2rem;
   background-color: $medium-gray;
   &.finished {
-    background-color: $orange;
+    background-color: darken($medium-blue, 6%);
   }
   li {
     float: left;
@@ -18,7 +19,7 @@
       color: white;
       text-decoration: none;
       padding: $small-spacing 0 $small-spacing 29px;
-      background-color: $orange;
+      background-color: darken($medium-blue, 6%);
       position: relative;
       display: block;
       float: left;
@@ -31,7 +32,7 @@
         border-top: 50px solid transparent;
         /* Go big on the size, and let overflow hide */
         border-bottom: 50px solid transparent;
-        border-left: 30px solid $orange;
+        border-left: 30px solid darken($medium-blue, 6%);
         position: absolute;
         top: 50%;
         margin-top: -50px;
@@ -67,8 +68,8 @@
       z-index: 3;
     }
     &:first-child a {
-      padding-left: $small-spacing;
-      max-width: 7em;
+      padding-left: 1.6rem;
+      max-width: 8em;
     }
     &:nth-child(2) a,
     &:nth-child(3) a,
