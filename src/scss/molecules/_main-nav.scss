@@ -44,15 +44,29 @@ nav {
 		font-weight: bold;
 		border-bottom: 1px solid #222222;
 		border-top: 1px solid #444444;
-		padding: 15px;
+		padding: $small-spacing;
 		a {
-			color: $lightest-gray;
+			color: lighten($dark-gray, 55%);
 			text-decoration: none;
       font-size: 1.6rem;
-      font-family: $thin-font-family;
+      font-family: $semiBold-font-family;
+      padding-left: 1rem;
 		}
     button {
       width: 100%;
+      background-color: lighten($dark-gray, 15%) !important;
+      color: darken($lightest-gray, 20%) !important;
+    }
+    input[type='search'] {
+			background-color: lighten($dark-gray, 10%);
+		}
+    .icon-neuter {
+      position: absolute;
+      color: $medium-gray;
+      right: 2rem;
+      font-size: 2rem;
+      top: 1.3rem;
+      transform: rotate(-40deg);
     }
 	}
 }

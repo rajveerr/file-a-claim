@@ -151,7 +151,7 @@ h3 {
 
 input[type='text'], input[type='number'], input[type='tel'],
 input[type='date'], input[type='password'], input[type='file'],
-input[type='tel'], input[type='email'], textarea, .radio-container, .checkbox-container {
+input[type='tel'], input[type='email'], input[type='search'], textarea, .radio-container, .checkbox-container {
   border: 0;
   background: #fff;
   font-family: "proximaNovaLight", Helvetica, Arial, sans-serif;
@@ -164,15 +164,15 @@ input[type='tel'], input[type='email'], textarea, .radio-container, .checkbox-co
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
   input[type='text']:hover, input[type='number']:hover, input[type='tel']:hover,
   input[type='date']:hover, input[type='password']:hover, input[type='file']:hover,
-  input[type='tel']:hover, input[type='email']:hover, textarea:hover, .radio-container:hover, .checkbox-container:hover {
+  input[type='tel']:hover, input[type='email']:hover, input[type='search']:hover, textarea:hover, .radio-container:hover, .checkbox-container:hover {
     cursor: text; }
   input[type='text']:focus, input[type='number']:focus, input[type='tel']:focus,
   input[type='date']:focus, input[type='password']:focus, input[type='file']:focus,
-  input[type='tel']:focus, input[type='email']:focus, textarea:focus, .radio-container:focus, .checkbox-container:focus {
+  input[type='tel']:focus, input[type='email']:focus, input[type='search']:focus, textarea:focus, .radio-container:focus, .checkbox-container:focus {
     outline: none; }
   input[type='text']:disabled, input[type='number']:disabled, input[type='tel']:disabled,
   input[type='date']:disabled, input[type='password']:disabled, input[type='file']:disabled,
-  input[type='tel']:disabled, input[type='email']:disabled, textarea:disabled, .radio-container:disabled, .checkbox-container:disabled {
+  input[type='tel']:disabled, input[type='email']:disabled, input[type='search']:disabled, textarea:disabled, .radio-container:disabled, .checkbox-container:disabled {
     background-color: #E9EFF0; }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -604,10 +604,46 @@ hr {
   content: '\e808'; }
 
 /* '' */
+.icon-bell:before {
+  content: '\e809'; }
+
+/* '' */
+.icon-check:before {
+  content: '\e80a'; }
+
+/* '' */
+.icon-thumbs-up:before {
+  content: '\e80b'; }
+
+/* '' */
+.icon-thumbs-down:before {
+  content: '\e80c'; }
+
+/* '' */
+.icon-cog:before {
+  content: '\e80d'; }
+
+/* '' */
+.icon-phone:before {
+  content: '\e80e'; }
+
+/* '' */
+.icon-pencil:before {
+  content: '\e80f'; }
+
+/* '' */
+.icon-user:before {
+  content: '\e810'; }
+
+/* '' */
 .icon-spin6:before {
   content: '\e839'; }
 
 /* '' */
+.icon-check-empty:before {
+  content: '\f096'; }
+
+/* '' */
 .icon-menu:before {
   content: '\f0c9'; }
 
@@ -640,6 +676,26 @@ hr {
   content: '\f107'; }
 
 /* '' */
+.icon-desktop:before {
+  content: '\f108'; }
+
+/* '' */
+.icon-laptop:before {
+  content: '\f109'; }
+
+/* '' */
+.icon-tablet:before {
+  content: '\f10a'; }
+
+/* '' */
+.icon-circle-empty:before {
+  content: '\f10c'; }
+
+/* '' */
+.icon-circle:before {
+  content: '\f111'; }
+
+/* '' */
 .icon-smile:before {
   content: '\f118'; }
 
@@ -656,10 +712,34 @@ hr {
   content: '\f124'; }
 
 /* '' */
+.icon-help:before {
+  content: '\f128'; }
+
+/* '' */
+.icon-dot-circled:before {
+  content: '\f192'; }
+
+/* '' */
+.icon-circle-thin:before {
+  content: '\f1db'; }
+
+/* '' */
 .icon-tty:before {
   content: '\f1e4'; }
 
 /* '' */
+.icon-toggle-off:before {
+  content: '\f204'; }
+
+/* '' */
+.icon-toggle-on:before {
+  content: '\f205'; }
+
+/* '' */
+.icon-neuter:before {
+  content: '\f22c'; }
+
+/* '' */
 .icon-commenting:before {
   content: '\f27a'; }
 
@@ -715,14 +795,26 @@ nav {
     font-weight: bold;
     border-bottom: 1px solid #222222;
     border-top: 1px solid #444444;
-    padding: 15px; }
+    padding: 0.75em; }
     nav li a {
-      color: #E9EFF0;
+      color: #c3c3c3;
       text-decoration: none;
       font-size: 1.6rem;
-      font-family: "proximaNovaThin", Helvetica, Arial, sans-serif; }
+      font-family: "proximaNovaSbold", Helvetica, Arial, sans-serif;
+      padding-left: 1rem; }
     nav li button {
-      width: 100%; }
+      width: 100%;
+      background-color: #5d5d5d !important;
+      color: #acc3c7 !important; }
+    nav li input[type='search'] {
+      background-color: #515151; }
+    nav li .icon-neuter {
+      position: absolute;
+      color: #CFD4D6;
+      right: 2rem;
+      font-size: 2rem;
+      top: 1.3rem;
+      transform: rotate(-40deg); }
 
 .table-minimal {
   border-collapse: separate;
