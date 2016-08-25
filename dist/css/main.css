@@ -675,9 +675,7 @@ hr {
 #content {
   position: relative;
   width: auto;
-  height: 100%;
-  -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4); }
+  height: 100%; }
 
 #contentLayer {
   display: none;
@@ -703,14 +701,9 @@ nav {
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #3e3c3d;
-  background: -moz-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e3c3d), color-stop(100%, #2d2c2d));
-  background: -webkit-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-  background: -o-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-  background: -ms-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-  background: linear-gradient(to bottom, #3e3c3d 0%, #2d2c2d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3e3c3d', endColorstr='#2d2c2d', GradientType=0); }
+  background: #373737;
+  background: -webkit-linear-gradient(45deg, #4c565a 0%, #373737 100%);
+  background: linear-gradient(45deg, #4c565a 0%, #373737 100%); }
   nav ul {
     list-style: none;
     margin: 0;
@@ -724,10 +717,10 @@ nav {
     border-top: 1px solid #444444;
     padding: 15px; }
     nav li a {
-      color: #A0AAAE;
+      color: #E9EFF0;
       text-decoration: none;
       font-size: 1.6rem;
-      font-family: "proximaNovaSbold", Helvetica, Arial, sans-serif; }
+      font-family: "proximaNovaThin", Helvetica, Arial, sans-serif; }
     nav li button {
       width: 100%; }
 
@@ -926,7 +919,8 @@ nav {
     padding: 6px 14px;
     color: #00a9d0; }
     .header-container .icon-menu.active {
-      background-color: #E9EFF0; }
+      background-color: #373737;
+      color: white; }
 
 fieldset {
   display: inline-block;

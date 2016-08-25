@@ -20,7 +20,8 @@
 			padding: 6px 14px;
 			color: darken($medium-blue, 6%);
 			&.active {
-				background-color: $lightest-gray;
+				background-color: $dark-gray;
+				color: white;
 			}
 		}
 }
