@@ -113,11 +113,11 @@ html(lang="en")
                   option(value='3') 4
                   option(value='3') 5
                   option(value='3') 6
-          .form-footer
-            span.primary-actions
-              button#primaryBtn.icon-right-open Next
-            span#secondaryBtn.secondary-actions
-              button.btn-secondary.icon-left-open Previous
+        .form-footer
+          span.primary-actions
+            button#primaryBtn.icon-right-open Next
+          span#secondaryBtn.secondary-actions
+            button.btn-secondary.icon-left-open Previous
 
 script(src='/javascript/vendors/jquery-3.1.0.min.js')
 script(src='/javascript/vendors/jquery-ui.min.js')
@@ -125,7 +125,7 @@ script(src='/javascript/global-scripts.js')
 
 script.
   $('#primaryBtn').click(function(){
-      window.location.href = 'verify.html';
+      window.location.href = 'review.html';
   }) 
   $('#secondaryBtn').click(function(){
     parent.history.back();

@@ -4,7 +4,7 @@
 }
 
 .page-component {
-	padding: $base-spacing $base-spacing $base-spacing;
+	padding: $base-spacing $base-spacing 0;
 	&.with-top-padding {
 		padding-top: 50px;
 	}

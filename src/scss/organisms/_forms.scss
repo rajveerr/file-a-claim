@@ -27,8 +27,8 @@ fieldset {
 
 .form-footer {
   @include outer-container();
-  margin: $base-spacing 0 0 0;
-  padding: $small-spacing 0;
+  background-color: white;
+  padding: $small-spacing $base-spacing $base-spacing*2 $base-spacing;
   border-top: 1px solid darken($lightest-gray, 10%);
   &:last-of-type {
     margin-bottom: 0;
@@ -46,6 +46,11 @@ fieldset {
   .primary-actions {
     text-align: right;
     float: right;
+  }
+  &.homepage {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 }
 
