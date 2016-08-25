@@ -5,14 +5,14 @@ html(lang="en")
     | Aflac : File a Claim
   link(href='/css/main.css', rel='stylesheet')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-  body
+  body.home
     #container
       include includes/_header-and-main-nav.jade         
       #contentLayer
       #content
         img.main-image(src='images/file-a-claim.png')
-        .wrapper.page-component.no-top-padding
-          h1 Start your claim for one day pay
+        .wrapper.page-component
+          h1 Start your claim for One Day Pay
           p When you use Aflac SmartClaim® to submit accident, cancer, hospitalization or illness claims online (by 3 p.m. ET Monday–Friday) you’ll get paid in just a day. 
           p
             label(for='username') Username
@@ -22,7 +22,7 @@ html(lang="en")
             input.password(type='password', name='password', value='blahblah')
           p.form-footer
             span.primary-actions
-              button.icon-right-open Start
+              button#primaryBtn.icon-right-open Start
             span.secondary-actions
               a(href='https://www.aflac.com/individuals/file-a-claim/default.aspx') File via fax or mail
             
@@ -31,3 +31,7 @@ html(lang="en")
 script(src='/javascript/vendors/jquery-3.1.0.min.js')
 script(src='/javascript/vendors/jquery-ui.min.js')
 script(src='/javascript/global-scripts.js')    
+script.
+  $('#primaryBtn').click(function(){
+      window.location.href = 'selection.html';
+  })

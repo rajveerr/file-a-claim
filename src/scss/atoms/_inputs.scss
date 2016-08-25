@@ -6,15 +6,17 @@ input[type='tel'], input[type='email'], input[type='search'], textarea, .radio-c
   font-family: $light-font-family;
   color: lighten($dark-gray, 10%);
   padding: $small-spacing;
-  -webkit-appearance:none;
   min-width: 100%;
+  min-height: 2rem;
   font-size: 1.4rem;
   border-radius: 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  outline: none;
   &:hover{
     cursor: text;
   }
-  &:focus {
+  &:focus,
+  &:selected {
     outline: none;
   }
   &:disabled {
@@ -22,8 +24,44 @@ input[type='tel'], input[type='email'], input[type='search'], textarea, .radio-c
   }
 }
 
+.radio-container.selected {
+  // background-color: darken($lightest-gray, 10%);
+  border: 1px solid darken($lightest-gray, 30%);
+}
+
+input[type='text'], input[type='number'], input[type='tel'],
+input[type='password'], input[type='file'],
+input[type='tel'], input[type='email'], input[type='search'], textarea, .radio-container, .checkbox-container {
+  -webkit-appearance:none;
+}
+
+input[type=date] {
+  height: 43px;
+  margin: 0 auto;
+  width: 300px;
+  outline: none;
+  border: 0;
+  background-color: $white;
+  font-family: $light-font-family;
+  color: lighten($dark-gray, 10%);
+  padding: $small-spacing;
+  min-width: 100%;
+  min-height: 2rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+.yes-no-choice {
+  @include outer-container();
+  .radio-container {
+    @include span-columns(12);
+    min-width: auto;
+  }
 }

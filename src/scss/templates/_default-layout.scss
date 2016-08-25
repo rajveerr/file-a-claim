@@ -4,9 +4,9 @@
 }
 
 .page-component {
-	padding: 50px $base-spacing $base-spacing;
-	&.no-top-padding {
-		padding-top: 0;
+	padding: $base-spacing $base-spacing $base-spacing;
+	&.with-top-padding {
+		padding-top: 50px;
 	}
   @include media($above-wide) {
       width: 50%;

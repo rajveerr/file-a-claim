@@ -1,4 +1,9 @@
-.main-image {
-  max-width: 100%;
-  margin-top: 50px;  
+.home {
+  .main-image {
+    max-width: 100%;
+    margin-top: 50px;
+  }
+  .page-component {
+    padding-top: 0;
+  }
 }

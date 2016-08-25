@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+  head
+  title
+    | Aflac : File a Claim
+  link(href='/css/main.css', rel='stylesheet')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+  body
+    #container
+      include includes/_header-and-main-nav.jade         
+      #contentLayer
+      #content
+        .breadcrumb-container
+          ul.breadcrumb
+            li
+              a(href='#') 
+                span Select Patient &amp; Claim Type
+            li
+              a.pending(href='#') 
+                span Claim Detail
+            li
+              a.pending(href='#') 
+                span Review
+            li
+              a.pending(href='#') 
+                span Acknowledge
+        .wrapper.page-component
+          
+          p
+            label(for='personFilingFor') For which person are you filing a claim 
+              span (select one)?
+            label.radio-container
+              input.radio(type='radio', name='personFilingForRadio', value='radio_1')
+              |  Alexander Hickman
+              em 02/15/1983
+            label.radio-container
+              input.radio(type='radio', name='personFilingForRadio', value='radio_2')
+              |  Alane Hickman
+              em 11/10/1986
+            label.radio-container
+              input.radio(type='radio', name='personFilingForRadio', value='radio_3')
+              |  Other
+          p
+            label(for='whyFiling') Why are you filing a claim?
+            label.radio-container
+              input.radio(type='radio', name='whyFilingRadio', value='radio_1')
+              |  An accident that happened to me or someone covered by my policy.
+            label.radio-container
+              input.radio(type='radio', name='whyFilingRadio', value='radio_2')
+              |  Routine and Preventive Care.
+            label.radio-container
+              input.radio(type='radio', name='whyFilingRadio', value='radio_3')
+              |  My reason is not listed. Please provide me with additional claim form choices.
+          p
+            label(for='when') Date of Accident?
+            input#when(name='when', type='date', min='2016-01-01', max='2016-12-01')
+          p.yes-no-choice
+            label(for='firstClaim') Is this the patient's first claim for condition?
+            label.radio-container
+              input.radio(type='radio', name='firstClaimRadio', value='radio_1')
+              |  Yes
+            label.radio-container
+              input.radio(type='radio', name='firstClaimRadio', value='radio_2')
+              |  No
+          p.form-footer
+            span.primary-actions
+              button#primaryBtn.icon-right-open Next
+            span#secondaryBtn.secondary-actions
+              button.btn-secondary.icon-left-open Previous
+            
+        
+
+script(src='/javascript/vendors/jquery-3.1.0.min.js')
+script(src='/javascript/vendors/jquery-ui.min.js')
+script(src='/javascript/global-scripts.js')  
+
+script.
+  $('#primaryBtn').click(function(){
+      window.location.href = 'claim-detail.html';
+  }) 
+  $('#secondaryBtn').click(function(){
+    parent.history.back();
+    return false;
+  })  
