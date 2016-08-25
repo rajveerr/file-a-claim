@@ -24,9 +24,8 @@ html(lang="en")
             li
               a.pending(href='#') 
                 span Acknowledge
-        .wrapper.page-component
-          
-          p
+        .wrapper.page-component          
+          .question
             label(for='personFilingFor') For which person are you filing a claim 
               span (select one)?
             label.radio-container
@@ -40,7 +39,7 @@ html(lang="en")
             label.radio-container
               input.radio(type='radio', name='personFilingForRadio', value='radio_3')
               |  Other
-          p
+          .question
             label(for='whyFiling') Why are you filing a claim?
             label.radio-container
               input.radio(type='radio', name='whyFilingRadio', value='radio_1')
@@ -51,10 +50,10 @@ html(lang="en")
             label.radio-container
               input.radio(type='radio', name='whyFilingRadio', value='radio_3')
               |  My reason is not listed. Please provide me with additional claim form choices.
-          p
+          .question
             label(for='when') Date of Accident?
             input#when(name='when', type='date', min='2016-01-01', max='2016-12-01')
-          p.yes-no-choice
+          .question.yes-no-choice
             label(for='firstClaim') Is this the patient's first claim for condition?
             label.radio-container
               input.radio(type='radio', name='firstClaimRadio', value='radio_1')
@@ -62,14 +61,11 @@ html(lang="en")
             label.radio-container
               input.radio(type='radio', name='firstClaimRadio', value='radio_2')
               |  No
-          p.form-footer
+          .form-footer
             span.primary-actions
               button#primaryBtn.icon-right-open Next
             span#secondaryBtn.secondary-actions
-              button.btn-secondary.icon-left-open Previous
-            
-        
-
+              button.btn-secondary.icon-left-open Previous                    
 script(src='/javascript/vendors/jquery-3.1.0.min.js')
 script(src='/javascript/vendors/jquery-ui.min.js')
 script(src='/javascript/global-scripts.js')  

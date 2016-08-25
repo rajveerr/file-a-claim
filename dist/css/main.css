@@ -161,25 +161,34 @@ input[type='tel'], input[type='email'], input[type='search'], textarea, .radio-c
   min-height: 2rem;
   font-size: 1.4rem;
   border-radius: 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  outline: none; }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
   input[type='text']:hover, input[type='number']:hover, input[type='tel']:hover,
   input[type='date']:hover, input[type='password']:hover, input[type='file']:hover,
   input[type='tel']:hover, input[type='email']:hover, input[type='search']:hover, textarea:hover, .radio-container:hover, .checkbox-container:hover {
     cursor: text; }
-  input[type='text']:focus, input[type='text']:selected, input[type='number']:focus, input[type='number']:selected, input[type='tel']:focus, input[type='tel']:selected,
-  input[type='date']:focus,
-  input[type='date']:selected, input[type='password']:focus, input[type='password']:selected, input[type='file']:focus, input[type='file']:selected,
-  input[type='tel']:focus,
-  input[type='tel']:selected, input[type='email']:focus, input[type='email']:selected, input[type='search']:focus, input[type='search']:selected, textarea:focus, textarea:selected, .radio-container:focus, .radio-container:selected, .checkbox-container:focus, .checkbox-container:selected {
-    outline: none; }
   input[type='text']:disabled, input[type='number']:disabled, input[type='tel']:disabled,
   input[type='date']:disabled, input[type='password']:disabled, input[type='file']:disabled,
   input[type='tel']:disabled, input[type='email']:disabled, input[type='search']:disabled, textarea:disabled, .radio-container:disabled, .checkbox-container:disabled {
     background-color: #E9EFF0; }
 
+input:focus {
+  outline: none; }
+
+.radio-container, .checkbox-container {
+  position: relative;
+  padding-left: 3.6rem; }
+  .radio-container input, .checkbox-container input {
+    position: absolute;
+    left: 1rem;
+    top: 1.2rem; }
+
+input[type='text'], input[type='number'], input[type='tel'],
+input[type='date'], input[type='password'], input[type='file'],
+input[type='tel'], input[type='email'], input[type='search'], textarea {
+  font-family: "proximaNovaReg", Helvetica, Arial, sans-serif; }
+
 .radio-container.selected {
-  border: 1px solid #8eadb2; }
+  font-family: "proximaNovaReg", Helvetica, Arial, sans-serif; }
 
 input[type='text'], input[type='number'], input[type='tel'],
 input[type='password'], input[type='file'],
@@ -851,10 +860,20 @@ fieldset {
   padding: 0.75em 0 0;
   border-radius: 1px;
   min-width: 100%; }
-  fieldset p {
+  fieldset .question {
     margin-bottom: 1.5em; }
-    fieldset p:last-of-type {
+    fieldset .question:last-of-type {
       margin-bottom: 0.75em; }
+
+.question {
+  margin-bottom: 1.5em; }
+
+.sub-question {
+  clear: both;
+  border-left: 4px solid #CFD4D6;
+  padding-left: 0.75em;
+  top: 0.75em;
+  margin-bottom: 0.75em; }
 
 .form-footer {
   max-width: 100%;

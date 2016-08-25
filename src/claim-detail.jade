@@ -24,13 +24,11 @@ html(lang="en")
             li
               a.pending(href='#') 
                 span Acknowledge
-        .wrapper.page-component
-          
-          p
+        .wrapper.page-component          
+          .question
             label(for='serviceDate') First date of service for this claim?
-            input#serviceDate(name='when', type='date', min='2016-01-01', max='2016-12-01')
-          
-          p.yes-no-choice
+            input#serviceDate(name='when', type='date', min='2016-01-01', max='2016-12-01')          
+          .question.yes-no-choice
             label(for='patientDriver') Was this a motor vehicle accident in which the patient was the driver?
             label.radio-container
               input.radio(type='radio', name='patientDriverRadio', value='radio_1')
@@ -38,11 +36,11 @@ html(lang="en")
             label.radio-container
               input.radio(type='radio', name='patientDriverRadio', value='radio_2')
               |  No
-          p.yes-no-choice
+          .question.yes-no-choice
             label(for='accidentDetails') Accident Details 
               span (include nature of accident and injuries sustained)
             textarea#accidentDetails(style='height: 16rem;')
-          p.yes-no-choice
+          .question.yes-no-choice
             label(for='transported') Was the patient transported to a medical facility by air or ground ambulance?
             label.radio-container
               input.radio(type='radio', name='transportedRadio', value='radio_1')
@@ -50,7 +48,7 @@ html(lang="en")
             label.radio-container
               input.radio(type='radio', name='transportedRadio', value='radio_2')
               |  No
-          p.yes-no-choice
+          .question.yes-no-choice
             label(for='confined') Was the patient confined to a hospital for this condition?
             label.radio-container
               input.radio(type='radio', name='confinedRadio', value='radio_1')
@@ -58,7 +56,7 @@ html(lang="en")
             label.radio-container
               input.radio(type='radio', name='confinedRadio', value='radio_2')
               |  No
-          p.yes-no-choice
+          .question.yes-no-choice
             label(for='prescribed') Was the patient prescribed anything to help him or her walk or move around, such as crutches, a brace, a wheelchair, or another device?
             label.radio-container
               input.radio(type='radio', name='prescribedRadio', value='radio_1')
@@ -66,7 +64,7 @@ html(lang="en")
             label.radio-container
               input.radio(type='radio', name='prescribedRadio', value='radio_2')
               |  No
-          p.yes-no-choice
+          .question.yes-no-choice
             label(for='surgery') Was surgery performed as a result of this condition?
             label.radio-container
               input.radio(type='radio', name='surgeryRadio', value='radio_1')
@@ -74,15 +72,16 @@ html(lang="en")
             label.radio-container
               input.radio(type='radio', name='surgeryRadio', value='radio_2')
               |  No
-          p.yes-no-choice
-            label(for='therapy') Did the patient receive physical therapy from a licensed physical therapist for an injury sustained in this accident? (HELP)
-            label.radio-container
-              input#therapyRadioYes.radio(type='radio', name='therapyRadio', value='radio_1')
-              |  Yes
-            label#therapyRadioNo.radio-container
-              input.radio(type='radio', name='therapyRadio', value='radio_2')
-              |  No
-            .select-wrapper#therapyYesContainer(style='display: none;')
+          .question.yes-no-choice
+            div
+              label(for='therapy') Did the patient receive physical therapy from a licensed physical therapist for an injury sustained in this accident? (HELP)
+              label.radio-container
+                input#therapyRadioYes.radio(type='radio', name='therapyRadio', value='radio_1')
+                |  Yes
+              label#therapyRadioNo.radio-container
+                input.radio(type='radio', name='therapyRadio', value='radio_2')
+                |  No
+            .select-wrapper.sub-question#therapyYesContainer(style='display: none;')
               label.font-thin(for='select_element') Number of occurrences you are filing for?
               select(name='select_element')
                 optgroup(label='Option Group 1')
@@ -94,15 +93,16 @@ html(lang="en")
                   option(value='5') 5
                   option(value='5') 10
           
-          p.yes-no-choice
-            label(for='followUpTreatment') Did the patient require and receive any follow-up treatment from a physician for this condition?
-            label#followUpTreatmentRadioYes.radio-container
-              input.radio(type='radio', name='followUpTreatmentRadio', value='radio_1')
-              |  Yes
-            label#followUpTreatmentRadioNo.radio-container
-              input.radio(type='radio', name='followUpTreatmentRadio', value='radio_2')
-              |  No
-            .select-wrapper#followUpTreatmentYesContainer(style='display: none;')
+          .question.yes-no-choice
+            div
+              label(for='followUpTreatment') Did the patient require and receive any follow-up treatment from a physician for this condition?
+              label#followUpTreatmentRadioYes.radio-container
+                input.radio(type='radio', name='followUpTreatmentRadio', value='radio_1')
+                |  Yes
+              label#followUpTreatmentRadioNo.radio-container
+                input.radio(type='radio', name='followUpTreatmentRadio', value='radio_2')
+                |  No
+            .select-wrapper.sub-question#followUpTreatmentYesContainer(style='display: none;')
               label.font-thin(for='select_element') Number of follow-up visits you are filing for?
               select(name='select_element')
                 optgroup(label='Option Group 1')
@@ -113,15 +113,7 @@ html(lang="en")
                   option(value='3') 4
                   option(value='3') 5
                   option(value='3') 6
-          
-          
-          
-          
-          
-          
-          
-            
-          p.form-footer
+          .form-footer
             span.primary-actions
               button#primaryBtn.icon-right-open Next
             span#secondaryBtn.secondary-actions
