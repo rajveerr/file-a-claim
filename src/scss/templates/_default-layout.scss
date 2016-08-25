@@ -4,8 +4,8 @@
 }
 
 .page-component {
-	padding: $base-spacing*3 $small-spacing $small-spacing $small-spacing;
-	&.graph-container {
+	padding: 50px $base-spacing $base-spacing;
+	&.no-top-padding {
 		padding-top: 0;
 	}
   @include media($above-wide) {

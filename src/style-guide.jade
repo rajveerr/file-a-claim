@@ -7,27 +7,7 @@ html(lang="en")
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
   body
     #container
-      .header-container
-        #hamburger(class='icon-menu')
-        h1(class='logo') Aflac : File a Claim
-      nav
-        ul
-          li
-            label(class='hidden') Text Field
-            input(type='search', placeholder='Search')            
-            i.icon-neuter
-          li
-            a(href='#') File a Claim
-          li
-            a(href='#') Products
-          li
-            a(href='#') What We Do
-          li
-            a(href='#') Contact
-          li
-            a(href='#') Search
-          li
-            button.btn-secondary Contact            
+      include includes/_header-and-main-nav.jade         
       #contentLayer
       #content.wrapper.page-component
         //- h2.main-title Atoms
@@ -87,13 +67,13 @@ html(lang="en")
           p
             button Primary
           p
-            button.btn-arrow-right Primary with Arrow
+            button.icon-right-open Primary with Arrow
           p
             button(disabled=true) Disabled
           p
             button.btn-secondary Secondary
           p
-            button.btn-secondary.btn-arrow-left Secondary with Arrow
+            button.btn-secondary.icon-left-open Secondary with Arrow
           p
             button.btn-secondary(disabled=true) Disabled
         fieldset.plain-fieldset
@@ -349,9 +329,9 @@ html(lang="en")
                   |  Checkbox 3
               p.form-footer
                 span.secondary-actions
-                  button.btn-secondary Cancel
+                  button.btn-secondary.icon-left-open Previous
                 span.primary-actions
-                  button Next
+                  button.icon-right-open Next
 style.
   .icons-container p {
     margin-bottom: 8px;

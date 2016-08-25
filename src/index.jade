@@ -4,15 +4,30 @@ html(lang="en")
   title
     | Aflac : File a Claim
   link(href='/css/main.css', rel='stylesheet')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
   body
-    h1 Jade - node template engine Rajveer
-    #container.col
-      if youAreUsingJade
-        p You are amazing
-      else
-        p Get on it! 
-      p.
-        Jade is a terse and simple
-        templating language with a
-        strong focus on performance
-        and powerful features. Hello
+    #container
+      include includes/_header-and-main-nav.jade         
+      #contentLayer
+      #content
+        img.main-image(src='images/file-a-claim.png')
+        .wrapper.page-component.no-top-padding
+          h1 Start your claim for one day pay
+          p When you use Aflac SmartClaim® to submit accident, cancer, hospitalization or illness claims online (by 3 p.m. ET Monday–Friday) you’ll get paid in just a day. 
+          p
+            label(for='username') Username
+            input#username(type='text', value='alexander.hickman')
+          p
+            label(for='password') Password
+            input.password(type='password', name='password', value='blahblah')
+          p.form-footer
+            span.primary-actions
+              button.icon-right-open Start
+            span.secondary-actions
+              a(href='https://www.aflac.com/individuals/file-a-claim/default.aspx') File via fax or mail
+            
+        
+
+script(src='/javascript/vendors/jquery-3.1.0.min.js')
+script(src='/javascript/vendors/jquery-ui.min.js')
+script(src='/javascript/global-scripts.js')    

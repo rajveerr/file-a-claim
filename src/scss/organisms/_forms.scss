@@ -25,9 +25,10 @@ fieldset {
   .secondary-actions {
     display: block;
     @extend %half-width;
-    .link-btn {
+    .link-btn,
+    a {
       padding-right: $small-spacing;
-      line-height: 2.8rem;
+      line-height: 3rem;
     }
   }
   .primary-actions {

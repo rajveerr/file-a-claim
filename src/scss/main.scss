@@ -27,7 +27,6 @@
 
 /* Molecules */
 @import "molecules/breadcrumb";
-@import "molecules/icons";
 @import "molecules/main-nav";
 @import "molecules/table";
 @import "molecules/input-and-button";
@@ -42,10 +41,10 @@
 @import "templates/default-layout";
 
 /* Pages */
-
+@import "pages/home";
 
 /* Icons */
-
+@import "molecules/icons";
 
 
 /* Master Styles */
@@ -64,7 +63,8 @@ html {
 }
 
 body,
-.wrapper {
+.wrapper,
+#content {
   position: relative;
 	background-color: $lightest-gray;
 }

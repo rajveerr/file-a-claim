@@ -17,11 +17,10 @@ a.btn-link:visited {
   text-transform: uppercase;
   outline: none;
   white-space: nowrap;
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
-    [class*="icono-"] {
-      color: $medium-blue;
-    }
+    background-color: lighten($orange, 10%);
   }
   &:active {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
@@ -41,18 +40,33 @@ a.btn-link:visited {
   &[hidden] {
     display: none !important;
   }
-  &.btn-arrow-right {
-   padding-right: $base-spacing*2 !important;
-  }
 }
 
-
+button.icon-right-open {
+  padding-right: 2.5em !important;
+  &:before {
+    position: absolute;
+    right: 1.1em;
+    top: .9em;
+  }
+}
 
 .btn-secondary {
   background-color: darken($medium-gray, 20%);
   color: $white;
-  &.btn-arrow-left {
-   padding-left: $base-spacing*2 !important;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: darken($medium-gray, 10%);
+  }
+  &.icon-left-open {
+   padding-left: 2.5em !important;
+   &:before {
+     position: absolute;
+     right: auto;
+     left: 1.1em;
+     top: .9em;
+   }
   }
 }
 
