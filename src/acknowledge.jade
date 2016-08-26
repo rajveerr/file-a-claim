@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")   
+  head
+  title
+    | Aflac : File a Claim
+  link(href='css/main.css', rel='stylesheet')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+  body.review
+    #container
+      include includes/_header-and-main-nav.jade         
+      #contentLayer
+      #content
+        .breadcrumb-container
+          ul.breadcrumb.finished
+            li
+              a(href='javascript:void(0)') 
+                span Select Patient &amp; Claim Type
+            li
+              a(href='javascript:void(0)') 
+                span Claim Detail
+            li
+              a(href='javascript:void(0)') 
+                span Review
+            li
+              a(href='#') 
+                span Acknowledge
+        .wrapper.page-component          
+          h1 Thank You for completing these steps. 
+          p You are almost finished - please acknowledge.
+          .card-container
+            p I accept and understand that in order for Aflac to process my claim, I will need to:	 
+              ul
+                li Electronically sign my claim form below
+                li Print and
+                li Submit this form
+                li Submit all supporting documentation requested to Aflac.
+
+            p Completion of this process does not guarantee coverage. Payment of benefits will be determined upon receipt of the claim documentation and in accordance with policy provisions.	
+            p Any person who knowingly and with intent to defraud any insurance company or other person files an application for insurance or statement of claim containing any materially false information or conceals for the purpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act, which is a crime, and subjects such person to criminal and civil penalties. 
+
+          .question
+            label(for='username') I certify that the information provided is true and correct
+            input#username(type='text', value='Alexander Hickman')
+            em.hint Type name as it should appear on the signature line of the claim form 
+            
+
+          
+        .form-footer
+          span.primary-actions
+            button#primaryBtn.icon-right-open Accept
+          span#secondaryBtn.secondary-actions
+            a(href='javascript:void(0)') Cancel
+
+script(src='javascript/vendors/jquery-3.1.0.min.js')
+script(src='javascript/vendors/jquery-ui.min.js')
+script(src='javascript/global-scripts.js')  
+
+script.
+  $('#primaryBtn').click(function(){
+      window.location.href = 'upload.html';
+  }) 
+  $('#secondaryBtn').click(function(){
+    parent.history.back();
+    return false;
+  })

@@ -15,6 +15,10 @@ fieldset {
 
 .question {
   margin-bottom: $small-spacing*2;
+  .hint {
+    padding-top: .75em;
+    display: block;
+  }
 }
 
 .sub-question {
@@ -28,7 +32,7 @@ fieldset {
 .form-footer {
   @include outer-container();
   background-color: white;
-  padding: $small-spacing $base-spacing $base-spacing*2 $base-spacing;
+  padding: $small-spacing $base-spacing $small-spacing $base-spacing;
   border-top: 1px solid darken($lightest-gray, 10%);
   &:last-of-type {
     margin-bottom: 0;
@@ -40,17 +44,12 @@ fieldset {
     .link-btn,
     a {
       padding-right: $small-spacing;
-      line-height: 3rem;
+      line-height: 3.5rem;
     }
   }
   .primary-actions {
     text-align: right;
     float: right;
-  }
-  &.homepage {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
   }
 }
 

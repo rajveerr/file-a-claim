@@ -3,7 +3,7 @@ html(lang="en")
   head
   title
     | Aflac : File a Claim
-  link(href='/css/main.css', rel='stylesheet')
+  link(href='css/main.css', rel='stylesheet')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
   body
     #container
@@ -258,25 +258,31 @@ html(lang="en")
 
             p
               label(for='radio_buttons') Radio Buttons
-              label.radio-container
+              label.control.control--radio
                 input.radio(type='radio', name='radio_button', value='radio_1')
+                .control__indicator
                 |  Radio 1
-              label.radio-container
+              label.control.control--radio
                 input.radio(type='radio', name='radio_button', value='radio_2')
+                .control__indicator
                 |  Radio 2
-              label.radio-container
+              label.control.control--radio
                 input.radio(type='radio', name='radio_button', value='radio_3')
+                .control__indicator
                 |  Radio 3
             p
               label(for='checkboxes') Checkboxes
-              label.checkbox-container
+              .control.control--checkbox
                 input.checkbox(type='checkbox', name='checkboxes', value='check_1')
+                .control__indicator
                 |  Checkbox 1
-              label.checkbox-container
+              .control.control--checkbox
                 input.checkbox(type='checkbox', name='checkboxes', value='check_2')
+                .control__indicator
                 |  Checkbox 2
-              label.checkbox-container
+              .control.control--checkbox
                 input.checkbox(type='checkbox', name='checkboxes', value='check_3')
+                .control__indicator
                 |  Checkbox 3
             p
               label(for='password') Password
@@ -307,25 +313,31 @@ html(lang="en")
                     option(value='3') Option 3
               p
                 label(for='radio_buttons') Radio Buttons
-                label.radio-container
+                label.control.control--radio
                   input.radio(type='radio', name='radio_button', value='radio_1', required='')
+                  .control__indicator
                   |  Radio 1
-                label.radio-container
+                label.control.control--radio
                   input.radio(type='radio', name='radio_button', value='radio_2')
+                  .control__indicator
                   |  Radio 2
-                label.radio-container
+                label.control.control--radio
                   input.radio(type='radio', name='radio_button', value='radio_3')
+                  .control__indicator
                   |  Radio 3
               p
                 label(for='checkboxes') Checkboxes
-                label.checkbox-container
+                .control.control--checkbox
                   input.checkbox(type='checkbox', name='checkboxes', value='check_1', required='')
+                  .control__indicator
                   |  Checkbox 1
-                label.checkbox-container
+                .control.control--checkbox
                   input.checkbox(type='checkbox', name='checkboxes', value='check_2')
+                  .control__indicator
                   |  Checkbox 2
-                label.checkbox-container
+                .control.control--checkbox
                   input.checkbox(type='checkbox', name='checkboxes', value='check_3')
+                  .control__indicator
                   |  Checkbox 3
               p.form-footer
                 span.secondary-actions
@@ -342,6 +354,6 @@ style.
     font-size: 2rem;
   }
 
-script(src='/javascript/vendors/jquery-3.1.0.min.js')
-script(src='/javascript/vendors/jquery-ui.min.js')
-script(src='/javascript/global-scripts.js')
+script(src='javascript/vendors/jquery-3.1.0.min.js')
+script(src='javascript/vendors/jquery-ui.min.js')
+script(src='javascript/global-scripts.js')

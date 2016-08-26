@@ -3,8 +3,8 @@ html(lang="en")
   head
   title
     | Aflac : File a Claim
-  link(href='/css/main.css', rel='stylesheet')
-  meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+  link(href='css/main.css', rel='stylesheet')
+  meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
   body
     #container
       include includes/_header-and-main-nav.jade         
@@ -28,47 +28,56 @@ html(lang="en")
           .question
             label(for='personFilingFor') For which person are you filing a claim 
               span (select one)?
-            label.radio-container
+            label.control.control--radio
               input.radio(type='radio', name='personFilingForRadio', value='radio_1')
+              .control__indicator
               |  Alexander Hickman
               em 02/15/1983
-            label.radio-container
+              
+            label.control.control--radio
               input.radio(type='radio', name='personFilingForRadio', value='radio_2')
+              .control__indicator
               |  Alane Hickman
               em 11/10/1986
-            label.radio-container
+            label.control.control--radio              
               input.radio(type='radio', name='personFilingForRadio', value='radio_3')
+              .control__indicator
               |  Other
           .question
             label(for='whyFiling') Why are you filing a claim?
-            label.radio-container
+            label.control.control--radio
               input.radio(type='radio', name='whyFilingRadio', value='radio_1')
+              .control__indicator
               |  An accident that happened to me or someone covered by my policy.
-            label.radio-container
+            label.control.control--radio
               input.radio(type='radio', name='whyFilingRadio', value='radio_2')
+              .control__indicator
               |  Routine and Preventive Care.
-            label.radio-container
+            label.control.control--radio
               input.radio(type='radio', name='whyFilingRadio', value='radio_3')
+              .control__indicator
               |  My reason is not listed. Please provide me with additional claim form choices.
           .question
             label(for='when') Date of Accident?
             input#when(name='when', type='date', min='2016-01-01', max='2016-12-01')
           .question.yes-no-choice
             label(for='firstClaim') Is this the patient's first claim for condition?
-            label.radio-container
+            label.control.control--radio
               input.radio(type='radio', name='firstClaimRadio', value='radio_1')
+              .control__indicator
               |  Yes
-            label.radio-container
+            label.control.control--radio
               input.radio(type='radio', name='firstClaimRadio', value='radio_2')
+              .control__indicator
               |  No
         .form-footer
           span.primary-actions
             button#primaryBtn.icon-right-open Next
           span#secondaryBtn.secondary-actions
             button.btn-secondary.icon-left-open Previous                    
-script(src='/javascript/vendors/jquery-3.1.0.min.js')
-script(src='/javascript/vendors/jquery-ui.min.js')
-script(src='/javascript/global-scripts.js')  
+script(src='javascript/vendors/jquery-3.1.0.min.js')
+script(src='javascript/vendors/jquery-ui.min.js')
+script(src='javascript/global-scripts.js')  
 
 script.
   $('#primaryBtn').click(function(){

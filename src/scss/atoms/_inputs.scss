@@ -1,6 +1,6 @@
 input[type='text'], input[type='number'], input[type='tel'],
 input[type='date'], input[type='password'], input[type='file'],
-input[type='tel'], input[type='email'], input[type='search'], textarea, .radio-container, .checkbox-container {
+input[type='tel'], input[type='email'], input[type='search'], textarea, .control--radio, .control--checkbox {
   border: 0;
   background: $white;
   font-family: $light-font-family;
@@ -23,7 +23,7 @@ input:focus {
   outline: none;
 }
 
-.radio-container, .checkbox-container {
+.control--radio, .control--checkbox {
   position: relative;
   padding-left: 3.6rem;
   input {
@@ -39,7 +39,7 @@ input[type='tel'], input[type='email'], input[type='search'], textarea {
   font-family: $italic-font-family;
 }
 
-.radio-container.selected {
+.control--radio.selected {
   // background-color: darken($lightest-gray, 10%);
   // border-width: 1px 0;
   // border-color: darken($lightest-gray, 10%);
@@ -49,7 +49,7 @@ input[type='tel'], input[type='email'], input[type='search'], textarea {
 
 input[type='text'], input[type='number'], input[type='tel'],
 input[type='password'], input[type='file'],
-input[type='tel'], input[type='email'], input[type='search'], textarea, .radio-container, .checkbox-container {
+input[type='tel'], input[type='email'], input[type='search'], textarea, .control--radio, .control--checkbox {
   -webkit-appearance:none;
 }
 
@@ -78,8 +78,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .yes-no-choice {
   @include outer-container();
-  .radio-container {
+  .control--radio {
     @include span-columns(12);
-    min-width: auto;
+    min-width: 0;
   }
 }

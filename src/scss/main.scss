@@ -18,6 +18,7 @@
 @import "atoms/texts";
 @import "atoms/headings";
 @import "atoms/inputs";
+@import "atoms/radio-and-checkbox";
 @import "atoms/select";
 @import "atoms/buttons";
 @import "atoms/links";
@@ -60,7 +61,6 @@ body {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-	overflow-y: scroll;
 }
 
 body,
@@ -68,6 +68,8 @@ body,
 #content {
   position: relative;
 	background-color: $lightest-gray;
+	overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 *,

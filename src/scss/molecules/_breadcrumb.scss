@@ -4,7 +4,7 @@
 .breadcrumb {
   list-style: none;
   overflow: hidden;
-  height: 4.2rem;
+  height: 3.9rem;
   font-family: $semiBold-font-family;
   font-size: 1.2rem;
   background-color: $medium-gray;
@@ -14,7 +14,7 @@
   li {
     float: left;
     width: 25%;
-    margin-left: -4px;
+    margin-left: -6px;
     a {
       color: white;
       text-decoration: none;
@@ -68,7 +68,7 @@
       z-index: 3;
     }
     &:first-child a {
-      padding-left: 1.6rem;
+      padding-left: 1.8rem;
       max-width: 8em;
     }
     &:nth-child(2) a,

@@ -1,0 +1,95 @@
+doctype html
+html(lang="en")   
+  head
+  title
+    | Aflac : File a Claim
+  link(href='css/main.css', rel='stylesheet')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+  body.review
+    #container
+      include includes/_header-and-main-nav.jade         
+      #contentLayer
+      #content
+        .breadcrumb-container
+          ul.breadcrumb
+            li
+              a(href='selection.html') 
+                span Select Patient &amp; Claim Type
+            li
+              a(href='claim-detail.html') 
+                span Claim Detail
+            li
+              a(href='#') 
+                span Review
+            li
+              a.pending(href='#') 
+                span Acknowledge
+        .wrapper.page-component          
+          h1 Is this information below correct? 
+          p You can still go back and make changes.
+          dl.question-answer-list
+            dt For which person are you filing a claim?
+            dd Alexander Hickman 
+              em DOB: 02/15/1983 
+
+            dt Why are you filing a claim?
+            dd An accident that happened to me or someone covered by my policy.
+
+            dt Date of Accident?
+            dd 08/26/2016
+
+            dt Is this the patient's first claim for condition?
+            dd Yes
+
+            dt First date of service for this claim?
+            dd 08/26/2016
+
+            dt Was this a motor vehicle accident in which the patient was the driver?
+            dd Yes
+
+            dd Accident Details (include nature of accident and injuries sustained)
+            dd A detailed message of the accident goes here.
+
+            dt Was the patient transported to a medical facility by air or ground ambulance?
+            dd Yes
+
+            dt Was the patient confined to a hospital for this condition?
+            dd Yes
+
+            dt Was the patient prescribed anything to help him or her walk or move around, such as crutches, a brace, a wheelchair, or another device?
+            dd Yes
+
+            dt Was surgery performed as a result of this condition?
+            dd Yes
+
+            dt Did the patient receive physical therapy from a licensed physical therapist for an injury sustained in this accident?
+            dd Yes
+
+            dt Number of occurrences you are filing for?
+            dd 2
+
+            dt Did the patient require and receive any follow-up treatment from a physician for this condition?
+            dd Yes
+
+            dt Number of follow-up visits you are filing for?
+            dd 3 
+
+          
+        .form-footer
+          span.primary-actions
+            button#primaryBtn.icon-right-open Next
+          span#secondaryBtn.secondary-actions
+            button.btn-secondary.icon-left-open Previous
+
+script(src='javascript/vendors/jquery-3.1.0.min.js')
+script(src='javascript/vendors/jquery-ui.min.js')
+script(src='javascript/global-scripts.js')  
+
+script.
+  $('#primaryBtn').click(function(){
+      window.location.href = 'acknowledge.html';
+  }) 
+  $('#secondaryBtn').click(function(){
+    parent.history.back();
+    return false;
+  })
