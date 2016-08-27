@@ -8,6 +8,7 @@
   font-family: $semiBold-font-family;
   font-size: 1.2rem;
   background-color: $medium-gray;
+  margin-left: 0;
   &.finished {
     background-color: darken($medium-blue, 6%);
   }

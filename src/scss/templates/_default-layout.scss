@@ -20,25 +20,6 @@
   margin: $small-spacing $small-spacing 0 $small-spacing;
 }
 
-// icons
-
-.icono-cross,
-.error {
-	color: lighten($light-gray, 15%);
-  cursor: pointer;
-  &:hover {
-    color: red;
-  }
-}
-
-i.icono-check,
-.success {
-	color: $green;
-	&:before {
-		left: 54%;
-	}
-}
-
 
 .hidden {
   display: none !important;

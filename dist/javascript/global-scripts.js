@@ -59,4 +59,5 @@ jQuery(document).ready(function () {
       $('input:not(:checked)').parent().removeClass("selected");
       $('input:checked').parent().addClass("selected");
   });
+  
 });

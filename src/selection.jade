@@ -6,7 +6,7 @@ html(lang="en")
   link(href='css/main.css', rel='stylesheet')
   meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
   body
-    #container
+    form#container(action='claim-detail.html', novalidate)
       include includes/_header-and-main-nav.jade         
       #contentLayer
       #content
@@ -26,10 +26,10 @@ html(lang="en")
                 span Acknowledge
         .wrapper.page-component          
           .question
-            label(for='personFilingFor') For which person are you filing a claim 
+            label For which person are you filing a claim 
               span (select one)?
             label.control.control--radio
-              input.radio(type='radio', name='personFilingForRadio', value='radio_1')
+              input.radio(type='radio', name='personFilingForRadio', value='radio_1', required='required', data-msg='Please chose the person the person you are filing for')
               .control__indicator
               |  Alexander Hickman
               em 02/15/1983
@@ -43,10 +43,11 @@ html(lang="en")
               input.radio(type='radio', name='personFilingForRadio', value='radio_3')
               .control__indicator
               |  Other
+            label.error(for='personFilingForRadio')
           .question
             label(for='whyFiling') Why are you filing a claim?
             label.control.control--radio
-              input.radio(type='radio', name='whyFilingRadio', value='radio_1')
+              input.radio(type='radio', name='whyFilingRadio', value='radio_1', required='required', data-msg='Please tell us the reason you are filing for')
               .control__indicator
               |  An accident that happened to me or someone covered by my policy.
             label.control.control--radio
@@ -57,19 +58,21 @@ html(lang="en")
               input.radio(type='radio', name='whyFilingRadio', value='radio_3')
               .control__indicator
               |  My reason is not listed. Please provide me with additional claim form choices.
+            label.error(for='whyFilingRadio')
           .question
             label(for='when') Date of Accident?
-            input#when(name='when', type='date', min='2016-01-01', max='2016-12-01')
+            input#when(name='when', type='date', min='2016-01-01', max='2016-12-01', required='required', data-msg='Please chose date of accident')
           .question.yes-no-choice
             label(for='firstClaim') Is this the patient's first claim for condition?
             label.control.control--radio
-              input.radio(type='radio', name='firstClaimRadio', value='radio_1')
+              input.radio(type='radio', name='firstClaimRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
               input.radio(type='radio', name='firstClaimRadio', value='radio_2')
               .control__indicator
               |  No
+            label.error(for='firstClaimRadio')
         .form-footer
           span.primary-actions
             button#primaryBtn.icon-right-open Next
@@ -77,12 +80,12 @@ html(lang="en")
             button.btn-secondary.icon-left-open Previous                    
 script(src='javascript/vendors/jquery-3.1.0.min.js')
 script(src='javascript/vendors/jquery-ui.min.js')
-script(src='javascript/global-scripts.js')  
+script(src='javascript/vendors/jquery.validate.min.js')
+script(src='javascript/global-scripts.js')
+script.
+  $("#container").validate();
 
 script.
-  $('#primaryBtn').click(function(){
-      window.location.href = 'claim-detail.html';
-  }) 
   $('#secondaryBtn').click(function(){
     parent.history.back();
     return false;

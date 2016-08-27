@@ -1,5 +1,5 @@
 input[type='text'], input[type='number'], input[type='tel'],
-input[type='date'], input[type='password'], input[type='file'],
+input[type='date'], input[type='password'], .file-upload,
 input[type='tel'], input[type='email'], input[type='search'], textarea, .control--radio, .control--checkbox {
   border: 0;
   background: $white;
@@ -16,6 +16,25 @@ input[type='tel'], input[type='email'], input[type='search'], textarea, .control
   }
   &:disabled {
     background-color: $lightest-gray;
+  }
+}
+
+.file-upload {
+  position: relative;
+  padding: $small-spacing $small-spacing $base-spacing $base-spacing*3.5;
+  margin: $small-spacing 0 $small-spacing*2;
+  .icon-upload {
+    position: absolute;
+    font-size: 3.5rem;
+    left: 2rem;
+    color: darken($lightest-gray, 20%);
+  }
+  span {
+    font-family: $italic-font-family;
+  }
+  input {
+    font-family: $thin-font-family;
+    font-size: 1.4rem;    
   }
 }
 
@@ -75,11 +94,16 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-
 .yes-no-choice {
   @include outer-container();
   .control--radio {
-    @include span-columns(12);
+    @include span-columns(11.85);
     min-width: 0;
   }
+  .control--radio:last-child {
+    margin: 0;
+  }
 }
+
+
+// type file

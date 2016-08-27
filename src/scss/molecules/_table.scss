@@ -67,118 +67,7 @@
     font-weight: normal;
     margin-left: $small-spacing;
   }
-  // clusters
-  .clusters-row {
-    th {
-      padding-left: 1em;
-      font-weight: normal;
-      font-family: $light-font-family;
-    }
-    td {
-      border-top-color: transparent;
-      padding-top: .3em;
-    }
-    .icono-crossCircle {
-      opacity: 0.2;
-    }
-  }
-  .clusters-caption {
-    text-align: left !important;
-    text-align: right;
-    padding-right: 1em;
-    color: black;
-    hr {
-      margin: 4px 0 4px 0;
-    }
-  }
-  .clusters-row,
-  .intervals-row {
-    td:nth-child(1) {
-      input {
-        width: 100%;
-      }
-    }
-    td:nth-child(2),
-    td:nth-child(3) {
-      width: 108px;
-      input {
-        width: 85px;
-      }
-    }
-    td:nth-child(3) {
-      padding-right: 0;
-    }
-    td:nth-child(4) {
-      width: 15px;
-      padding-left: 0;
-    }
-    td:nth-child(5) {
-      width: 195px;
-      padding-right: 0;
-    }
-    td:nth-child(6) {
-      width: 31px;
-      padding-left: 0;
-      padding-right: 0.3em;
-    }
-  }
-  .icono-crossCircle {
-    opacity: 0.3;
-    cursor: pointer;
-    zoom: 70%;
-    &:hover {
-      opacity: 0.5;
-      color: red;
-    }
-  }
-}
 
-.well-list,
-.intervals-table {
-  thead,
-  tbody {
-    background-color: transparent;
-    th, td {
-      background-color: transparent;
-      text-align: left;
-    }
-  }
-  input[type='number'] {
-    display: inline-block;
-    min-width: auto;
-  }
-  th,
-  td {
-    &:last-of-type {
-      text-align: right;
-    }
-  }
-}
-
-#well-intervals {
-  fieldset {
-    padding-top: 0;
-  }
-  .form-footer {
-    padding: $small-spacing 2.55em;
-  }
-}
-
-.intervals-table {
-  th,
-  td {
-    &:first-child {
-      padding-left: $base-spacing;
-      padding-left: 2.2em !important;
-    }
-  }
-  p {
-    padding: 0;
-  }
-  input[type='text'],
-  input[type='number'] {
-    // min-width: 90%;
-  }
 }
 
 .form-table {
@@ -207,8 +96,4 @@
     min-width: 0;
   }
 
-}
-
-#intervalsCount {
-  min-width: 4rem;
 }

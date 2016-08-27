@@ -14,6 +14,7 @@ fieldset {
 }
 
 .question {
+  position: relative;
   margin-bottom: $small-spacing*2;
   .hint {
     padding-top: .75em;
@@ -67,12 +68,32 @@ label {
   span {
     font-family: $thin-font-family;
   }
+  &.error {
+    font-family: $thin-font-family;
+    color: $red;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: -2.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+.yes-no-choice label.error {
+  // right: -102%;
+}
+
+form label.error {
+    display: none;
 }
 
 input,
 select,
 textarea {
   display: block;
+  &.error {
+    // background-color: lighten($red, 51%)
+  }
 }
 
 textarea {

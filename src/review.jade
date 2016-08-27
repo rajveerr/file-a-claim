@@ -6,7 +6,7 @@ html(lang="en")
   link(href='css/main.css', rel='stylesheet')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
   body.review
-    #container
+    form#container(action='acknowledge.html')
       include includes/_header-and-main-nav.jade         
       #contentLayer
       #content
@@ -86,9 +86,6 @@ script(src='javascript/vendors/jquery-ui.min.js')
 script(src='javascript/global-scripts.js')  
 
 script.
-  $('#primaryBtn').click(function(){
-      window.location.href = 'acknowledge.html';
-  }) 
   $('#secondaryBtn').click(function(){
     parent.history.back();
     return false;

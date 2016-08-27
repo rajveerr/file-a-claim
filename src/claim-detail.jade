@@ -6,7 +6,7 @@ html(lang="en")
   link(href='css/main.css', rel='stylesheet')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
   body
-    #container
+    form#container(action='review.html', novalidate)
       include includes/_header-and-main-nav.jade         
       #contentLayer
       #content
@@ -27,25 +27,25 @@ html(lang="en")
         .wrapper.page-component          
           .question
             label(for='serviceDate') First date of service for this claim?
-            input#serviceDate(name='when', type='date', min='2016-01-01', max='2016-12-01')          
+            input#serviceDate(name='when', type='date', min='2016-01-01', max='2016-12-01', required='required', data-msg='Please chose a date')          
           .question.yes-no-choice
             label(for='patientDriver') Was this a motor vehicle accident in which the patient was the driver?
             label.control.control--radio
-              input.radio(type='radio', name='patientDriverRadio', value='radio_1')
+              input.radio(type='radio', name='patientDriverRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
               input.radio(type='radio', name='patientDriverRadio', value='radio_2')
               .control__indicator
               |  No
-          .question.yes-no-choice
+          .question
             label(for='accidentDetails') Accident Details 
               span (include nature of accident and injuries sustained)
-            textarea#accidentDetails(style='height: 16rem;')
+            textarea#accidentDetails(style='height: 16rem;', required='required', data-msg-required='Please provide accident details', data-msg='A little detailed message please', minlength="20")
           .question.yes-no-choice
             label(for='transported') Was the patient transported to a medical facility by air or ground ambulance?
             label.control.control--radio
-              input.radio(type='radio', name='transportedRadio', value='radio_1')
+              input.radio(type='radio', name='transportedRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
@@ -55,7 +55,7 @@ html(lang="en")
           .question.yes-no-choice
             label(for='confined') Was the patient confined to a hospital for this condition?
             label.control.control--radio
-              input.radio(type='radio', name='confinedRadio', value='radio_1')
+              input.radio(type='radio', name='confinedRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
@@ -65,7 +65,7 @@ html(lang="en")
           .question.yes-no-choice
             label(for='prescribed') Was the patient prescribed anything to help him or her walk or move around, such as crutches, a brace, a wheelchair, or another device?
             label.control.control--radio
-              input.radio(type='radio', name='prescribedRadio', value='radio_1')
+              input.radio(type='radio', name='prescribedRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
@@ -75,7 +75,7 @@ html(lang="en")
           .question.yes-no-choice
             label(for='surgery') Was surgery performed as a result of this condition?
             label.control.control--radio
-              input.radio(type='radio', name='surgeryRadio', value='radio_1')
+              input.radio(type='radio', name='surgeryRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
@@ -86,7 +86,7 @@ html(lang="en")
             div
               label(for='therapy') Did the patient receive physical therapy from a licensed physical therapist for an injury sustained in this accident? (HELP)
               label.control.control--radio
-                input#therapyRadioYes.radio(type='radio', name='therapyRadio', value='radio_1')
+                input#therapyRadioYes.radio(type='radio', name='therapyRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
                 .control__indicator
                 |  Yes
               label#therapyRadioNo.control.control--radio                
@@ -95,7 +95,7 @@ html(lang="en")
                 |  No
             .select-wrapper.sub-question#therapyYesContainer(style='display: none;')
               label(for='select_element') Number of occurrences you are filing for?
-              select(name='select_element')
+              select(name='select_element', required='required')
                 optgroup(label='Option Group 1')
                   option(value='0') Select
                   option(value='1') 1
@@ -109,7 +109,7 @@ html(lang="en")
             div
               label(for='followUpTreatment') Did the patient require and receive any follow-up treatment from a physician for this condition?
               label#followUpTreatmentRadioYes.control.control--radio
-                input.radio(type='radio', name='followUpTreatmentRadio', value='radio_1')
+                input.radio(type='radio', name='followUpTreatmentRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
                 .control__indicator
                 |  Yes
               label#followUpTreatmentRadioNo.control.control--radio
@@ -118,7 +118,7 @@ html(lang="en")
                 |  No
             .select-wrapper.sub-question#followUpTreatmentYesContainer(style='display: none;')
               label(for='select_element') Number of follow-up visits you are filing for?
-              select(name='select_element')
+              select(name='select_element', required='required')
                 optgroup(label='Option Group 1')
                   option(value='1') Select
                   option(value='1') 1
@@ -135,12 +135,10 @@ html(lang="en")
 
 script(src='javascript/vendors/jquery-3.1.0.min.js')
 script(src='javascript/vendors/jquery-ui.min.js')
+script(src='javascript/vendors/jquery.validate.min.js')
 script(src='javascript/global-scripts.js')  
 
 script.
-  $('#primaryBtn').click(function(){
-      window.location.href = 'review.html';
-  }) 
   $('#secondaryBtn').click(function(){
     parent.history.back();
     return false;
@@ -160,6 +158,5 @@ script.
   $('#therapyRadioNo').click(function(){
     $('#therapyYesContainer').hide();
   })
-
   
-  
+  $("#container").validate();

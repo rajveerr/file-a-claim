@@ -6,7 +6,7 @@ html(lang="en")
   link(href='css/main.css', rel='stylesheet')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
   body.home
-    #container
+    form#container(action='selection.html', novalidate)
       include includes/_header-and-main-nav.jade         
       #contentLayer
       #content
@@ -16,10 +16,10 @@ html(lang="en")
           p When you use Aflac SmartClaim® to submit accident, cancer, hospitalization or illness claims online (by 3 p.m. ET Monday–Friday) you’ll get paid in just a day. 
           .question
             label(for='username') Username
-            input#username(type='text', value='alexander.hickman')
+            input#username(type='text', required='required', data-msg-required='Please enter your username', data-msg='Please enter a valid username', minlength="5")
           .question
             label(for='password') Password
-            input.password(type='password', name='password', value='blahblah')
+            input.password(type='password', name='password', required='required', data-msg-required='Please enter your password', data-msg='Please enter a valid password', minlength="5")
       .form-footer.homepage
         span.primary-actions
           button#primaryBtn.icon-right-open Start
@@ -30,8 +30,7 @@ html(lang="en")
 
 script(src='javascript/vendors/jquery-3.1.0.min.js')
 script(src='javascript/vendors/jquery-ui.min.js')
-script(src='javascript/global-scripts.js')    
+script(src='javascript/vendors/jquery.validate.min.js')
+script(src='javascript/global-scripts.js')
 script.
-  $('#primaryBtn').click(function(){
-      window.location.href = 'selection.html';
-  })
+  $("#container").validate();
