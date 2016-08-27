@@ -21,20 +21,21 @@ input[type='tel'], input[type='email'], input[type='search'], textarea, .control
 
 .file-upload {
   position: relative;
-  padding: $small-spacing $small-spacing $base-spacing $base-spacing*3.5;
-  margin: $small-spacing 0 $small-spacing*2;
+  padding: $base-spacing 0 $base-spacing $base-spacing*3.5;
+  margin-bottom: $small-spacing*2;
   .icon-upload {
     position: absolute;
     font-size: 3.5rem;
+    top: 0.6rem;
     left: 2rem;
-    color: darken($lightest-gray, 20%);
+    color: darken($lightest-gray, 30%);
   }
   span {
     font-family: $italic-font-family;
   }
   input {
     font-family: $thin-font-family;
-    font-size: 1.4rem;    
+    font-size: 1.4rem;
   }
 }
 

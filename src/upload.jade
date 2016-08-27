@@ -3,7 +3,8 @@ html(lang="en")
   head
   title
     | Aflac : File a Claim
-  link(href='css/main.css', rel='stylesheet')
+  link(href='css/screen.css', rel='stylesheet')
+  meta(http-equiv="content-type", content="#{contentType}; charset=UTF-8")
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
   body.review
     form#container(action='#', novalidate)
@@ -18,9 +19,10 @@ html(lang="en")
             li Date(s) services provided
             li Description of services
             li Name and address of servicing health care provider
+          label(style='margin-top: 1em;') Attach file(s)
           label.file-upload(for='file')
             i.icon-upload
-            span Attach file(s)
+            
             input.file(type='file', id='file' name='file', multiple='multiple', class='inputfile', required='required', data-msg='Please attach the file(s)')
             
         .form-footer
