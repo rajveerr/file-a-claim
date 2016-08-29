@@ -846,6 +846,39 @@ nav {
     color: #db1414;
     background-color: #f9c2c2; }
 
+.ui-dialog {
+  position: fixed !important;
+  width: 100% !important;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding-top: 10%; }
+  .ui-dialog .ui-dialog-titlebar,
+  .ui-dialog .ui-dialog-content {
+    background-color: white;
+    left: 10%;
+    background: white;
+    padding: 0 1.5em;
+    margin: 0 1.5em; }
+  .ui-dialog .ui-dialog-content {
+    padding-bottom: 1.5em; }
+  .ui-dialog .ui-dialog-titlebar {
+    min-height: 2.5rem; }
+  .ui-dialog .ui-dialog-titlebar-close {
+    position: absolute;
+    right: 1em;
+    margin-top: 3px;
+    padding: 0;
+    min-width: 0;
+    background: transparent;
+    color: #7c8a90;
+    font-size: 2.5rem; }
+  .ui-dialog .ui-button-text {
+    display: none; }
+
 /* Organisms */
 .header-container {
   position: fixed;
@@ -889,6 +922,11 @@ fieldset {
   .question .hint {
     padding-top: .75em;
     display: block; }
+  .question .icon-info-circled {
+    font-size: 1.8rem;
+    position: relative;
+    left: 1rem;
+    color: #aeb6ba; }
 
 .sub-question {
   clear: both;
@@ -1008,8 +1046,8 @@ textarea {
 /* Icons */
 @font-face {
   font-family: 'fontello';
-  src: url("fonts/icons/iconfont.eot");
-  src: url("fonts/icons/iconfont.eot"), url("fonts/icons/iconfont.woff2"), url("fonts/icons/iconfont.woff"), url("fonts/icons/iconfont.ttf"), url("fonts/icons/iconfont.svg");
+  src: url("fonts/icons/fontello.eot");
+  src: url("fonts/icons/fontello.eot"), url("fonts/icons/fontello.woff2"), url("fonts/icons/fontello.woff"), url("fonts/icons/fontello.ttf"), url("fonts/icons/fontello.svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -1023,7 +1061,8 @@ textarea {
   }
 }
 */
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before,
+.ui-dialog-titlebar-close:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -1072,7 +1111,7 @@ textarea {
   content: '\e805'; }
 
 /* '' */
-.icon-cancel-circled:before {
+.icon-cancel-circled:before, .ui-dialog .ui-dialog-titlebar-close:before {
   content: '\e806'; }
 
 /* '' */
@@ -1124,6 +1163,14 @@ textarea {
   content: '\e812'; }
 
 /* '' */
+.icon-help-circled:before {
+  content: '\e813'; }
+
+/* '' */
+.icon-info-circled:before {
+  content: '\e814'; }
+
+/* '' */
 .icon-spin6:before {
   content: '\e839'; }
 

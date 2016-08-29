@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('fonts/icons/iconfont.eot');
-  src: url('fonts/icons/iconfont.eot'),
-       url('fonts/icons/iconfont.woff2'),
-       url('fonts/icons/iconfont.woff'),
-       url('fonts/icons/iconfont.ttf'),
-       url('fonts/icons/iconfont.svg');
+  src: url('fonts/icons/fontello.eot');
+  src: url('fonts/icons/fontello.eot'),
+       url('fonts/icons/fontello.woff2'),
+       url('fonts/icons/fontello.woff'),
+       url('fonts/icons/fontello.ttf'),
+       url('fonts/icons/fontello.svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,7 +20,8 @@
 }
 */
 
- [class^="icon-"]:before, [class*=" icon-"]:before {
+ [class^="icon-"]:before, [class*=" icon-"]:before,
+ .ui-dialog-titlebar-close:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -72,6 +73,8 @@
 .icon-user:before { content: '\e810'; } /* '' */
 .icon-upload:before { content: '\e811'; } /* '' */
 .icon-download:before { content: '\e812'; } /* '' */
+.icon-help-circled:before { content: '\e813'; } /* '' */
+.icon-info-circled:before { content: '\e814'; } /* '' */
 .icon-spin6:before { content: '\e839'; } /* '' */
 .icon-check-empty:before { content: '\f096'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */

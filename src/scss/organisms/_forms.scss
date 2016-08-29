@@ -20,6 +20,12 @@ fieldset {
     padding-top: .75em;
     display: block;
   }
+  .icon-info-circled {
+    font-size: 1.8rem;
+    position: relative;
+    left: 1rem;
+    color: darken($medium-gray, 12%);
+  }
 }
 
 .sub-question {

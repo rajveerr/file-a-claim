@@ -85,7 +85,7 @@ html(lang="en")
               |  No
           .question.yes-no-choice
             div
-              label(for='therapy') Did the patient receive physical therapy from a licensed physical therapist for an injury sustained in this accident? (HELP)
+              label(for='therapy') Did the patient receive physical therapy from a licensed physical therapist for an injury sustained in this accident?
               label.control.control--radio
                 input#therapyRadioYes.radio(type='radio', name='therapyRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
                 .control__indicator
@@ -108,7 +108,10 @@ html(lang="en")
           
           .question.yes-no-choice
             div
+              #dialog.dialog(title='')
+                p Follow-up treatment must be provided by a licensed physician. Diagnostic testing, laboratory services, and physical therapy are not payable as follow-up treatment. See your policy for your specific coverage.
               label(for='followUpTreatment') Did the patient require and receive any follow-up treatment from a physician for this condition?
+                i#opener.icon-info-circled
               label#followUpTreatmentRadioYes.control.control--radio
                 input.radio(type='radio', name='followUpTreatmentRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
                 .control__indicator
@@ -161,3 +164,19 @@ script.
   })
   
   $("#container").validate();
+  
+  $( "#dialog" ).dialog({
+    autoOpen: false,
+    show: {
+      effect: "blind",
+      duration: 10
+    },
+    hide: {
+      effect: "explode",
+      duration: 10
+    }
+  });
+
+  $( "#opener" ).on( "click", function() {
+    $( "#dialog" ).dialog('open');
+  });
