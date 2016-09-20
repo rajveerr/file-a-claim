@@ -7,7 +7,7 @@ html(lang="en")
   meta(http-equiv="content-type", content="#{contentType}; charset=UTF-8")
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
   body.review
-    form#container(action='#', novalidate)
+    form#container(action='success.html', novalidate)
       include includes/_header-and-main-nav.jade         
       #contentLayer
       #content
@@ -22,7 +22,6 @@ html(lang="en")
           label(style='margin-top: 1em;') Attach file(s)
           label.file-upload(for='file')
             i.icon-upload
-            
             input.file(type='file', id='file' name='file', multiple='multiple', class='inputfile', required='required', data-msg='Please attach the file(s)')
             
         .form-footer

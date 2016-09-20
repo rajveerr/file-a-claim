@@ -46,11 +46,22 @@ html(lang="en")
             
 
           
+            
+            
         .form-footer
           span.primary-actions
             button#primaryBtn.icon-right-open Accept
-          span#secondaryBtn.secondary-actions
+          span#opener.secondary-actions
             a(href='javascript:void(0)') Cancel
+
+        #dialog.dialog(title='Cancel Filing?', style='padding-bottom: 0;')
+          p By declining, the Aflac Claims Department will not be able to review the claim documentation in accordance with the policy provisions. Therefore, the information provided will be deleted and no data retained by the system. 
+          p Are you sure you want to decline?
+          .form-footer(style='margin-top:2rem;')
+            span.primary-actions
+              button.btn-secondary No
+            span#opener.secondary-actions
+              a(href='javascript:void(0)') Yes
 
 script(src='javascript/vendors/jquery-3.1.0.min.js')
 script(src='javascript/vendors/jquery-ui.min.js')
@@ -58,9 +69,20 @@ script(src='javascript/vendors/jquery.validate.min.js')
 script(src='javascript/global-scripts.js')  
 
 script.
-  $('#secondaryBtn').click(function(){
-    parent.history.back();
-    return false;
+  $( "#dialog" ).dialog({
+    autoOpen: false,
+    show: {
+      effect: "blind",
+      duration: 10
+    },
+    hide: {
+      effect: "explode",
+      duration: 10
+    }
+  });
+  
+  $('#opener').click(function(){
+    $( "#dialog" ).dialog('open');
   })
   
   $("#container").validate();

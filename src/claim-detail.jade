@@ -32,21 +32,31 @@ html(lang="en")
           .question.yes-no-choice
             label(for='patientDriver') Was this a motor vehicle accident in which the patient was the driver?
             label.control.control--radio
-              input.radio(type='radio', name='patientDriverRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
+              input.radio(type='radio', name='patientDriverRadio', value='radio_1', required='required', data-msg='Please choose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
               input.radio(type='radio', name='patientDriverRadio', value='radio_2')
               .control__indicator
               |  No
+          .question.yes-no-choice
+            label(for='onJob') Was the accident on the job?
+            label.control.control--radio
+              input.radio(type='radio', name='onJobRadio', value='radio_1', required='required', data-msg='Please choose Yes or No')
+              .control__indicator
+              |  Yes
+            label.control.control--radio
+              input.radio(type='radio', name='onJobRadio', value='radio_2')
+              .control__indicator
+              |  No
           .question
             label(for='accidentDetails') Accident Details 
               span (include nature of accident and injuries sustained)
-            textarea#accidentDetails(style='height: 16rem;', required='required', data-msg-required='Please provide accident details', data-msg='A little detailed message please', minlength="20")
+            textarea#accidentDetails(style='height: 16rem;', required='required', data-msg-required='Please provide accident details', data-msg='A little detailed message please', minlength="4")
           .question.yes-no-choice
             label(for='transported') Was the patient transported to a medical facility by air or ground ambulance?
             label.control.control--radio
-              input.radio(type='radio', name='transportedRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
+              input.radio(type='radio', name='transportedRadio', value='radio_1', required='required', data-msg='Please choose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
@@ -56,7 +66,7 @@ html(lang="en")
           .question.yes-no-choice
             label(for='confined') Was the patient confined to a hospital for this condition?
             label.control.control--radio
-              input.radio(type='radio', name='confinedRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
+              input.radio(type='radio', name='confinedRadio', value='radio_1', required='required', data-msg='Please choose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
@@ -66,7 +76,7 @@ html(lang="en")
           .question.yes-no-choice
             label(for='prescribed') Was the patient prescribed anything to help him or her walk or move around, such as crutches, a brace, a wheelchair, or another device?
             label.control.control--radio
-              input.radio(type='radio', name='prescribedRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
+              input.radio(type='radio', name='prescribedRadio', value='radio_1', required='required', data-msg='Please choose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
@@ -76,7 +86,7 @@ html(lang="en")
           .question.yes-no-choice
             label(for='surgery') Was surgery performed as a result of this condition?
             label.control.control--radio
-              input.radio(type='radio', name='surgeryRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
+              input.radio(type='radio', name='surgeryRadio', value='radio_1', required='required', data-msg='Please choose Yes or No')
               .control__indicator
               |  Yes
             label.control.control--radio
@@ -87,7 +97,7 @@ html(lang="en")
             div
               label(for='therapy') Did the patient receive physical therapy from a licensed physical therapist for an injury sustained in this accident?
               label.control.control--radio
-                input#therapyRadioYes.radio(type='radio', name='therapyRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
+                input#therapyRadioYes.radio(type='radio', name='therapyRadio', value='radio_1', required='required', data-msg='Please choose Yes or No')
                 .control__indicator
                 |  Yes
               label#therapyRadioNo.control.control--radio                
@@ -113,7 +123,7 @@ html(lang="en")
               label(for='followUpTreatment') Did the patient require and receive any follow-up treatment from a physician for this condition?
                 i#opener.icon-info-circled
               label#followUpTreatmentRadioYes.control.control--radio
-                input.radio(type='radio', name='followUpTreatmentRadio', value='radio_1', required='required', data-msg='Please chose Yes or No')
+                input.radio(type='radio', name='followUpTreatmentRadio', value='radio_1', required='required', data-msg='Please choose Yes or No')
                 .control__indicator
                 |  Yes
               label#followUpTreatmentRadioNo.control.control--radio

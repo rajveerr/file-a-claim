@@ -79,48 +79,49 @@ html(lang="en")
             button.btn-secondary(disabled=true) Disabled
         fieldset.plain-fieldset
           legend Breadcrumb
-          p
-            ul.breadcrumb
-              li
-                a(href='#') 
-                  span Select Patient &amp; Claim Type
-              li
-                a.pending(href='#') 
-                  span Claim Detail
-              li
-                a.pending(href='#') 
-                  span Review
-              li
-                a.pending(href='#') 
-                  span Acknowledge
-          p
-            ul.breadcrumb
-              li
-                a(href='#') 
-                  span Select Patient &amp; Claim Type
-              li
-                a(href='#') 
-                  span Claim Detail
-              li
-                a.pending(href='#') 
-                  span Review
-              li
-                a.pending(href='#') 
-                  span Acknowledge
-          p
-            ul.breadcrumb.finished
-              li
-                a(href='#') 
-                  span Select Patient &amp; Claim Type
-              li
-                a(href='#') 
-                  span Claim Detail
-              li
-                a(href='#') 
-                  span Review
-              li
-                a(href='#') 
-                  span Acknowledge
+          div(style='margin: 0 -20px')
+            p
+              ul.breadcrumb
+                li
+                  a(href='#') 
+                    span Select Patient &amp; Claim Type
+                li
+                  a.pending(href='#') 
+                    span Claim Detail
+                li
+                  a.pending(href='#') 
+                    span Review
+                li
+                  a.pending(href='#') 
+                    span Acknowledge
+            p
+              ul.breadcrumb
+                li
+                  a(href='#') 
+                    span Select Patient &amp; Claim Type
+                li
+                  a(href='#') 
+                    span Claim Detail
+                li
+                  a.pending(href='#') 
+                    span Review
+                li
+                  a.pending(href='#') 
+                    span Acknowledge
+            p
+              ul.breadcrumb.finished
+                li
+                  a(href='#') 
+                    span Select Patient &amp; Claim Type
+                li
+                  a(href='#') 
+                    span Claim Detail
+                li
+                  a(href='#') 
+                    span Review
+                li
+                  a(href='#') 
+                    span Acknowledge
         fieldset.plain-fieldset
           legend Links
           |     This is a 
@@ -129,86 +130,7 @@ html(lang="en")
         fieldset.plain-fieldset
           legend Spinner
           p
-            i.icon-spin6.animate-spin
-        fieldset.plain-fieldset
-          legend Icons
-          .icons-container
-            p
-              i.demo-icon.icon-left-open 
-              | arrow left
-            p
-              i.demo-icon.icon-right-open
-              | arrow right
-            p
-              i.demo-icon.icon-attention 
-              | attention
-            p
-              i.demo-icon.icon-ok
-              | ok
-            p
-              i.demo-icon.icon-cancel
-              | cancel
-            p
-              i.demo-icon.icon-ok-circled 
-              | ok-circled
-            p
-              i.demo-icon.icon-cancel-circled 
-              | cancel-circled
-            p
-              i.demo-icon.icon-plus-circled 
-              | plus-circled
-            p
-              i.demo-icon.icon-minus-circled 
-              | minus-circled            
-            p
-              i.demo-icon.icon-menu 
-              | menu
-            p
-              i.demo-icon.icon-lightbulb 
-              | lightbulb
-            p
-              i.demo-icon.icon-ambulance 
-              | ambulance
-            p
-              i.demo-icon.icon-medkit 
-              | medkit
-            p
-              i.demo-icon.icon-angle-left 
-              | angle-left
-            p
-              i.demo-icon.icon-angle-right 
-              | angle-right
-            p
-              i.demo-icon.icon-angle-up 
-              | angle-up
-            p
-              i.demo-icon.icon-angle-down 
-              | angle-down
-            p
-              i.demo-icon.icon-smile 
-              | smile
-            p
-              i.demo-icon.icon-frown 
-              | frown
-            p
-              i.demo-icon.icon-meh 
-              | meh
-            p
-              i.demo-icon.icon-direction 
-              | direction
-            p
-              i.demo-icon.icon-tty 
-              | tty
-            p
-              i.demo-icon.icon-commenting 
-              | commenting
-            p
-              i.demo-icon.icon-volume-control-phone 
-              | phone
-            p
-              i.demo-icon.icon-font-awesome 
-              | flag
-
+            i.icon-spin6.animate-spin        
         fieldset.plain-fieldset
           legend Tables
           table.table-minimal(cellspacing='0', cellpadding='0')
@@ -289,8 +211,10 @@ html(lang="en")
               label(for='password') Password
               input.password(type='password', name='password')
             p
-              label(for='file') File Input:
-              input.file(type='file', name='file')
+              label(style='margin-top: 1em;') Attach file(s)
+              label.file-upload(for='file')
+                i.icon-upload
+                input.file(type='file', id='file' name='file', multiple='multiple', class='inputfile', required='required', data-msg='Please attach the file(s)')
         hr
         h2.main-title Organisms
         fieldset.plain-fieldset
@@ -345,6 +269,84 @@ html(lang="en")
                   button.btn-secondary.icon-left-open Previous
                 span.primary-actions
                   button.icon-right-open Next
+            fieldset.plain-fieldset
+              legend Icons
+              .icons-container
+                p
+                  i.demo-icon.icon-left-open 
+                  | arrow left
+                p
+                  i.demo-icon.icon-right-open
+                  | arrow right
+                p
+                  i.demo-icon.icon-attention 
+                  | attention
+                p
+                  i.demo-icon.icon-ok
+                  | ok
+                p
+                  i.demo-icon.icon-cancel
+                  | cancel
+                p
+                  i.demo-icon.icon-ok-circled 
+                  | ok-circled
+                p
+                  i.demo-icon.icon-cancel-circled 
+                  | cancel-circled
+                p
+                  i.demo-icon.icon-plus-circled 
+                  | plus-circled
+                p
+                  i.demo-icon.icon-minus-circled 
+                  | minus-circled            
+                p
+                  i.demo-icon.icon-menu 
+                  | menu
+                p
+                  i.demo-icon.icon-lightbulb 
+                  | lightbulb
+                p
+                  i.demo-icon.icon-ambulance 
+                  | ambulance
+                p
+                  i.demo-icon.icon-medkit 
+                  | medkit
+                p
+                  i.demo-icon.icon-angle-left 
+                  | angle-left
+                p
+                  i.demo-icon.icon-angle-right 
+                  | angle-right
+                p
+                  i.demo-icon.icon-angle-up 
+                  | angle-up
+                p
+                  i.demo-icon.icon-angle-down 
+                  | angle-down
+                p
+                  i.demo-icon.icon-smile 
+                  | smile
+                p
+                  i.demo-icon.icon-frown 
+                  | frown
+                p
+                  i.demo-icon.icon-meh 
+                  | meh
+                p
+                  i.demo-icon.icon-direction 
+                  | direction
+                p
+                  i.demo-icon.icon-tty 
+                  | tty
+                p
+                  i.demo-icon.icon-commenting 
+                  | commenting
+                p
+                  i.demo-icon.icon-volume-control-phone 
+                  | phone
+                p
+                  i.demo-icon.icon-font-awesome 
+                  | flag
 style.
   .icons-container p {
     margin-bottom: 8px;

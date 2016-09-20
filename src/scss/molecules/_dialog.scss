@@ -21,6 +21,13 @@
   }
   .ui-dialog-titlebar {
     min-height: 2.5rem;
+    .ui-dialog-title {
+        font-family: $semiBold-font-family;
+        display: inline-block;
+        font-size: 2rem;
+        padding: 0.5em 0 0.2em 0;
+    }
+
   }
   .ui-dialog-titlebar-close {
     position: absolute;

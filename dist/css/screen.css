@@ -649,7 +649,7 @@ hr {
     background-color: #00a9d0; }
   .breadcrumb li {
     float: left;
-    width: 25%;
+    width: 27%;
     margin-left: -6px; }
     .breadcrumb li a {
       color: white;
@@ -698,20 +698,22 @@ hr {
       position: relative;
       z-index: 3; }
     .breadcrumb li:first-child a {
-      padding-left: 1.8rem;
-      max-width: 8em; }
+      padding-left: 1.8rem; }
     .breadcrumb li:nth-child(2) a,
     .breadcrumb li:nth-child(3) a,
     .breadcrumb li:nth-child(4) a,
     .breadcrumb li:nth-child(5) a {
-      line-height: 2; }
+      line-height: 19px;
+      min-height: 39px; }
     .breadcrumb li:nth-child(4) a {
       max-width: 11em; }
-    .breadcrumb li:last-of-type a {
-      padding-left: .6em;
-      padding-right: 0.75em; }
-      .breadcrumb li:last-of-type a:before, .breadcrumb li:last-of-type a:after {
-        display: none; }
+    .breadcrumb li:last-of-type {
+      width: 22%; }
+      .breadcrumb li:last-of-type a {
+        padding-left: .6em;
+        padding-right: 0.75em; }
+        .breadcrumb li:last-of-type a:before, .breadcrumb li:last-of-type a:after {
+          display: none; }
 
 #content {
   position: relative;
@@ -867,6 +869,11 @@ nav {
     padding-bottom: 1.5em; }
   .ui-dialog .ui-dialog-titlebar {
     min-height: 2.5rem; }
+    .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+      font-family: "proximaNovaSbold", Helvetica, Arial, sans-serif;
+      display: inline-block;
+      font-size: 2rem;
+      padding: 0.5em 0 0.2em 0; }
   .ui-dialog .ui-dialog-titlebar-close {
     position: absolute;
     right: 1em;
